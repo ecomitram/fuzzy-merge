@@ -1,0 +1,15 @@
+{
+    "name": "fuzzy-csv-merge",
+    "version": "1.0.0",
+    "description": "Merge CSV records based on fuzzy matching",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "Shyam Verma",
+    "dependencies": {
+        "csv-parse": "^4.13.1",
+        "fuzzyset": "^0.8.0"
+    }
+}
