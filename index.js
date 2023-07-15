@@ -2,29 +2,55 @@ const fs = require("fs");
 const csvParse = require("csv-parse");
 const FuzzySet = require("fuzzyset");
 
+
+
+const finalData = {};
+function saveRecord(row, matchedName)
+{
+  if(finalData[matchedName] !== undefined){
+    //record already exist, merge
+    finalData[matchedName][1] = parseInt(finalData[matchedName][1])+parseInt(row[1]);//count column
+  }else{
+    //insert new record
+    finalData[matchedName] = row;
+  }
+}
+
+
 function mergeRecords(csvData) {
   const mergedData = [];
-  const fuzzyMap = FuzzySet();
+  
   let matches = [];
   let count = 1;
 
+
   //empty log file
-  fs.writeFileSync("matches.log", "");
+  fs.writeFileSync("output/matches.log", "");
 
+  const pincodeFuzzymap = {};
   csvData.forEach((row, index) => {
-    //bhabha bhopal (465691),1,Bhabha Bhopal,465691,Rajgarh
-    const [name, count, school, pincode, city] = row;
+    const [nameWithPincode, count, name, pincode, city] = row;
 
-    if (index % 1000 == 0) {
-      console.log("processed:", index, "Matched Items:", fuzzyMap.length());
+    //use seperate fuzzyset for every pincode
+    if(pincodeFuzzymap[pincode] === undefined){
+      pincodeFuzzymap[pincode] = FuzzySet();
+    }
+    const fuzzyMap = pincodeFuzzymap[pincode];
+
+    if (index % 5000 == 0) {
+      console.log(
+        "processed:",
+        index,
+        "Matched Items:",
+        Object.values(finalData).length
+      );
     }
     // Check if there is a fuzzy match for the name
-    //console.log("Checking:", name);
     matches = fuzzyMap.get(name, null, 0.75);
     if (matches) {
       //already have a match
       fs.appendFileSync(
-        "matches.log",
+        "output/matches.log",
         `${matches[0][1]}, ${name}, score:${matches[0][0]}` + "\n",
         (err) => {
           if (err) {
@@ -32,9 +58,10 @@ function mergeRecords(csvData) {
           }
         }
       );
+      saveRecord(row, matches[0][1]);
     } else {
-      //console.log("XXX No Matching", name);
       fuzzyMap.add(name);
+      saveRecord(row,name);
     }
   });
 
@@ -42,19 +69,14 @@ function mergeRecords(csvData) {
     "Original Items:",
     csvData.length,
     "Matched Items:",
-    fuzzyMap.length()
+    Object.values(finalData).length
   );
 
-  fs.writeFileSync("matches.txt", fuzzyMap.values().join("\n"));
-  // fuzzyMap.forEach((value) => {
-  //   mergedData.push([value.name, value.count]);
-  // });
-
-  // return mergedData;
+  return finalData;
 }
 
 // Read the CSV file
-fs.readFile("nspc.csv", "utf8", (err, data) => {
+fs.readFile("input/nspc.csv", "utf8", (err, data) => {
   if (err) {
     console.error(err);
     return;
@@ -67,7 +89,12 @@ fs.readFile("nspc.csv", "utf8", (err, data) => {
       return;
     }
 
-    const mergedData = mergeRecords(csvData);
-    // console.log(mergedData);
+    mergeRecords(csvData);
+    fs.writeFileSync(
+      "output/out.csv",
+      Object.values(finalData)
+        .map((record) => '"'+Object.values(record).join('","')+'"')
+        .join("\n")
+    );
   });
 });
