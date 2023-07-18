@@ -16,6 +16,20 @@ function saveRecord(row, matchedName)
   }
 }
 
+function cleanName(name, city) {
+  name = name.trim();
+
+  //lowercase
+  name = name.toLowerCase();
+
+  //remove cioty names
+  name = name.replace(city.toLowerCase(), "");
+
+  //remove non alpha-numeric, with space
+  name = name.replace("/[^a-z0-9 ]/g", " ");
+
+  return name;
+}
 
 function mergeRecords(csvData) {
   const mergedData = [];
@@ -29,19 +43,20 @@ function mergeRecords(csvData) {
 
   const pincodeFuzzymap = {};
   csvData.forEach((row, index) => {
-    const [nameWithPincode, count, name, pincode, city] = row;
+    const [nameWithPincode, count, origName, pincode, city] = row;
 
+    const name = cleanName(origName,city);
     //use seperate fuzzyset for every pincode
     if(pincodeFuzzymap[pincode] === undefined){
       pincodeFuzzymap[pincode] = FuzzySet();
     }
     const fuzzyMap = pincodeFuzzymap[pincode];
 
-    if (index % 5000 == 0) {
+    if (index && index % 10000 == 0) {
       console.log(
-        "processed:",
+        "Processed:",
         index,
-        "Matched Items:",
+        "Normalized:",
         Object.values(finalData).length
       );
     }
@@ -76,6 +91,8 @@ function mergeRecords(csvData) {
 }
 
 // Read the CSV file
+console.time("Execution Time");
+
 fs.readFile("input/nspc.csv", "utf8", (err, data) => {
   if (err) {
     console.error(err);
@@ -96,5 +113,9 @@ fs.readFile("input/nspc.csv", "utf8", (err, data) => {
         .map((record) => '"'+Object.values(record).join('","')+'"')
         .join("\n")
     );
+
+    console.timeEnd("Execution Time");
   });
+  
+
 });
