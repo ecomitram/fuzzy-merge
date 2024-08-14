@@ -1,0 +1,4398 @@
+{
+  "nicobars": {
+    "district": "Nicobars",
+    "state": "Andaman And Nicobar Islands",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "north and middle andaman": {
+    "district": "North And Middle Andaman",
+    "state": "Andaman And Nicobar Islands",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "south andamans": {
+    "district": "South Andamans",
+    "state": "Andaman And Nicobar Islands",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "anantapur": {
+    "district": "Anantapur",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "chittoor": {
+    "district": "Chittoor",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "east godavari": {
+    "district": "East Godavari",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "guntur": {
+    "district": "Guntur",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "krishna": {
+    "district": "Krishna",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "kurnool": {
+    "district": "Kurnool",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "prakasam": {
+    "district": "Prakasam",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "spsr nellore": {
+    "district": "Spsr Nellore",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "srikakulam": {
+    "district": "Srikakulam",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "visakhapatanam": {
+    "district": "Visakhapatanam",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "vizianagaram": {
+    "district": "Vizianagaram",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "west godavari": {
+    "district": "West Godavari",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "y.s.r.": {
+    "district": "Y.S.R.",
+    "state": "Andhra Pradesh",
+    "prant": "Andhra Pradesh",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "anjaw": {
+    "district": "Anjaw",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "changlang": {
+    "district": "Changlang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "dibang valley": {
+    "district": "Dibang Valley",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "east kameng": {
+    "district": "East Kameng",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "east siang": {
+    "district": "East Siang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "kamle": {
+    "district": "Kamle",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "kra daadi": {
+    "district": "Kra Daadi",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "kurung kumey": {
+    "district": "Kurung Kumey",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "leparada": {
+    "district": "Leparada",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "lohit": {
+    "district": "Lohit",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "longding": {
+    "district": "Longding",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "lower dibang valley": {
+    "district": "Lower Dibang Valley",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "lower siang": {
+    "district": "Lower Siang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "lower subansiri": {
+    "district": "Lower Subansiri",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "namsai": {
+    "district": "Namsai",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "pakke kessang": {
+    "district": "Pakke Kessang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "papum pare": {
+    "district": "Papum Pare",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "shi yomi": {
+    "district": "Shi Yomi",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "siang": {
+    "district": "Siang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "tawang": {
+    "district": "Tawang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "tirap": {
+    "district": "Tirap",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "upper siang": {
+    "district": "Upper Siang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "upper subansiri": {
+    "district": "Upper Subansiri",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "west kameng": {
+    "district": "West Kameng",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "west siang": {
+    "district": "West Siang",
+    "state": "Arunachal Pradesh",
+    "prant": "Arunachal",
+    "kshetra": " Assam kshetra"
+  },
+  "baksa": {
+    "district": "Baksa",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "barpeta": {
+    "district": "Barpeta",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "biswanath": {
+    "district": "Biswanath",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "bongaigaon": {
+    "district": "Bongaigaon",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "cachar": {
+    "district": "Cachar",
+    "state": "Assam",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "charaideo": {
+    "district": "Charaideo",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "chirang": {
+    "district": "Chirang",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "darrang": {
+    "district": "Darrang",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "dhemaji": {
+    "district": "Dhemaji",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "dhubri": {
+    "district": "Dhubri",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "dibrugarh": {
+    "district": "Dibrugarh",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "dima hasao": {
+    "district": "Dima Hasao",
+    "state": "Assam",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "goalpara": {
+    "district": "Goalpara",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "golaghat": {
+    "district": "Golaghat",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "hailakandi": {
+    "district": "Hailakandi",
+    "state": "Assam",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "hojai": {
+    "district": "Hojai",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "jorhat": {
+    "district": "Jorhat",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "kamrup": {
+    "district": "Kamrup",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "kamrup metro": {
+    "district": "Kamrup Metro",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "karbi anglong": {
+    "district": "Karbi Anglong",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "karimganj": {
+    "district": "Karimganj",
+    "state": "Assam",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "kokrajhar": {
+    "district": "Kokrajhar",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "lakhimpur": {
+    "district": "Lakhimpur",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "majuli": {
+    "district": "Majuli",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "marigaon": {
+    "district": "Marigaon",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "nagaon": {
+    "district": "Nagaon",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "nalbari": {
+    "district": "Nalbari",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "sivasagar": {
+    "district": "Sivasagar",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "sonitpur": {
+    "district": "Sonitpur",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "south salmara mancachar": {
+    "district": "South Salmara Mancachar",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "tinsukia": {
+    "district": "Tinsukia",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "udalguri": {
+    "district": "Udalguri",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "west karbi anglong": {
+    "district": "West Karbi Anglong",
+    "state": "Assam",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "araria": {
+    "district": "Araria",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "arwal": {
+    "district": "Arwal",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "banka": {
+    "district": "Banka",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "begusarai": {
+    "district": "Begusarai",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "bhagalpur": {
+    "district": "Bhagalpur",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "bhojpur": {
+    "district": "Bhojpur",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "buxar": {
+    "district": "Buxar",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "darbhanga": {
+    "district": "Darbhanga",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "gaya": {
+    "district": "Gaya",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "gopalganj": {
+    "district": "Gopalganj",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "jamui": {
+    "district": "Jamui",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "jehanabad": {
+    "district": "Jehanabad",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "kaimur (bhabua)": {
+    "district": "Kaimur (Bhabua)",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "katihar": {
+    "district": "Katihar",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "khagaria": {
+    "district": "Khagaria",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "kishanganj": {
+    "district": "Kishanganj",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "lakhisarai": {
+    "district": "Lakhisarai",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "madhepura": {
+    "district": "Madhepura",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "madhubani": {
+    "district": "Madhubani",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "munger": {
+    "district": "Munger",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "muzaffarpur": {
+    "district": "Muzaffarpur",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "nalanda": {
+    "district": "Nalanda",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "nawada": {
+    "district": "Nawada",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "pashchim champaran": {
+    "district": "Pashchim Champaran",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "patna": {
+    "district": "Patna",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "purbi champaran": {
+    "district": "Purbi Champaran",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "purnia": {
+    "district": "Purnia",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "rohtas": {
+    "district": "Rohtas",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "saharsa": {
+    "district": "Saharsa",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "samastipur": {
+    "district": "Samastipur",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "saran": {
+    "district": "Saran",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "sheikhpura": {
+    "district": "Sheikhpura",
+    "state": "Bihar",
+    "prant": "South Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "sheohar": {
+    "district": "Sheohar",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "sitamarhi": {
+    "district": "Sitamarhi",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "siwan": {
+    "district": "Siwan",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "supaul": {
+    "district": "Supaul",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "vaishali": {
+    "district": "Vaishali",
+    "state": "Bihar",
+    "prant": "North Bihar",
+    "kshetra": " Bihar kshetra"
+  },
+  "chandigarh": {
+    "district": "Chandigarh",
+    "state": "Chandigarh",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "balod": {
+    "district": "Balod",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "baloda bazar": {
+    "district": "Baloda Bazar",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "bastar": {
+    "district": "Bastar",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "bemetara": {
+    "district": "Bemetara",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "bijapur": {
+    "district": "Bijapur",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "dantewada": {
+    "district": "Dantewada",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "dhamtari": {
+    "district": "Dhamtari",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "durg": {
+    "district": "Durg",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "gariyaband": {
+    "district": "Gariyaband",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "gaurella pendra marwahi": {
+    "district": "Gaurella Pendra Marwahi",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "janjgir-champa": {
+    "district": "Janjgir-Champa",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "jashpur": {
+    "district": "Jashpur",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "kabirdham": {
+    "district": "Kabirdham",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "kanker": {
+    "district": "Kanker",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "kondagaon": {
+    "district": "Kondagaon",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "korba": {
+    "district": "Korba",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "korea": {
+    "district": "Korea",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "mahasamund": {
+    "district": "Mahasamund",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "mungeli": {
+    "district": "Mungeli",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "narayanpur": {
+    "district": "Narayanpur",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "raigarh": {
+    "district": "Raigarh",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "raipur": {
+    "district": "Raipur",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "rajnandgaon": {
+    "district": "Rajnandgaon",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "sukma": {
+    "district": "Sukma",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "surajpur": {
+    "district": "Surajpur",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "surguja": {
+    "district": "Surguja",
+    "state": "Chhattisgarh",
+    "prant": "Chattisgarh",
+    "kshetra": " Madhya kshetra"
+  },
+  "central": {
+    "district": "Central",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "east": {
+    "district": "East",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "new delhi": {
+    "district": "New Delhi",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "north": {
+    "district": "North",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "north east": {
+    "district": "North East",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "north west": {
+    "district": "North West",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "shahdara": {
+    "district": "Shahdara",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "south": {
+    "district": "South",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "south east": {
+    "district": "South East",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "south west": {
+    "district": "South West",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "west": {
+    "district": "West",
+    "state": "Delhi",
+    "prant": "Delhi",
+    "kshetra": " Uttar kshetra"
+  },
+  "north goa": {
+    "district": "North Goa",
+    "state": "Goa",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "south goa": {
+    "district": "South Goa",
+    "state": "Goa",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "ahmadabad": {
+    "district": "Ahmadabad",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "amreli": {
+    "district": "Amreli",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "anand": {
+    "district": "Anand",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "arvalli": {
+    "district": "Arvalli",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "banas kantha": {
+    "district": "Banas Kantha",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "bharuch": {
+    "district": "Bharuch",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "bhavnagar": {
+    "district": "Bhavnagar",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "botad": {
+    "district": "Botad",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "chhotaudepur": {
+    "district": "Chhotaudepur",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "dang": {
+    "district": "Dang",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "devbhumi dwarka": {
+    "district": "Devbhumi Dwarka",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "dohad": {
+    "district": "Dohad",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "gandhinagar": {
+    "district": "Gandhinagar",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "gir somnath": {
+    "district": "Gir Somnath",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "jamnagar": {
+    "district": "Jamnagar",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "junagadh": {
+    "district": "Junagadh",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "kachchh": {
+    "district": "Kachchh",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "kheda": {
+    "district": "Kheda",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "mahesana": {
+    "district": "Mahesana",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "mahisagar": {
+    "district": "Mahisagar",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "morbi": {
+    "district": "Morbi",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "narmada": {
+    "district": "Narmada",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "navsari": {
+    "district": "Navsari",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "panch mahals": {
+    "district": "Panch Mahals",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "patan": {
+    "district": "Patan",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "porbandar": {
+    "district": "Porbandar",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "rajkot": {
+    "district": "Rajkot",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "sabar kantha": {
+    "district": "Sabar Kantha",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "surat": {
+    "district": "Surat",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "surendranagar": {
+    "district": "Surendranagar",
+    "state": "Gujarat",
+    "prant": "Saurashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "tapi": {
+    "district": "Tapi",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "vadodara": {
+    "district": "Vadodara",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "valsad": {
+    "district": "Valsad",
+    "state": "Gujarat",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "ambala": {
+    "district": "Ambala",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "bhiwani": {
+    "district": "Bhiwani",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "charki dadri": {
+    "district": "Charki Dadri",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "faridabad": {
+    "district": "Faridabad",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "fatehabad": {
+    "district": "Fatehabad",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "gurugram": {
+    "district": "Gurugram",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "hisar": {
+    "district": "Hisar",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "jhajjar": {
+    "district": "Jhajjar",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "jind": {
+    "district": "Jind",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "kaithal": {
+    "district": "Kaithal",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "karnal": {
+    "district": "Karnal",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "kurukshetra": {
+    "district": "Kurukshetra",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "mahendragarh": {
+    "district": "Mahendragarh",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "nuh": {
+    "district": "Nuh",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "palwal": {
+    "district": "Palwal",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "panchkula": {
+    "district": "Panchkula",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "panipat": {
+    "district": "Panipat",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "rewari": {
+    "district": "Rewari",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "rohtak": {
+    "district": "Rohtak",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "sirsa": {
+    "district": "Sirsa",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "sonipat": {
+    "district": "Sonipat",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "yamunanagar": {
+    "district": "Yamunanagar",
+    "state": "Haryana",
+    "prant": "Haryana",
+    "kshetra": " Uttar kshetra"
+  },
+  "bilaspur": {
+    "district": "Bilaspur",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "chamba": {
+    "district": "Chamba",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "kangra": {
+    "district": "Kangra",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "kinnaur": {
+    "district": "Kinnaur",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "kullu": {
+    "district": "Kullu",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "lahul and spiti": {
+    "district": "Lahul And Spiti",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "mandi": {
+    "district": "Mandi",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "shimla": {
+    "district": "Shimla",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "sirmaur": {
+    "district": "Sirmaur",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "solan": {
+    "district": "Solan",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "una": {
+    "district": "Una",
+    "state": "Himachal Pradesh",
+    "prant": "Himachal",
+    "kshetra": " Uttar kshetra"
+  },
+  "anantnag": {
+    "district": "Anantnag",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "bandipora": {
+    "district": "Bandipora",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "baramulla": {
+    "district": "Baramulla",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "budgam": {
+    "district": "Budgam",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "doda": {
+    "district": "Doda",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "ganderbal": {
+    "district": "Ganderbal",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "jammu": {
+    "district": "Jammu",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "kathua": {
+    "district": "Kathua",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "kishtwar": {
+    "district": "Kishtwar",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "kulgam": {
+    "district": "Kulgam",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "kupwara": {
+    "district": "Kupwara",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "poonch": {
+    "district": "Poonch",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "pulwama": {
+    "district": "Pulwama",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "rajouri": {
+    "district": "Rajouri",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "ramban": {
+    "district": "Ramban",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "reasi": {
+    "district": "Reasi",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "samba": {
+    "district": "Samba",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "shopian": {
+    "district": "Shopian",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "srinagar": {
+    "district": "Srinagar",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "udhampur": {
+    "district": "Udhampur",
+    "state": "Jammu And Kashmir",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "bokaro": {
+    "district": "Bokaro",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "chatra": {
+    "district": "Chatra",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "deoghar": {
+    "district": "Deoghar",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "dhanbad": {
+    "district": "Dhanbad",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "dumka": {
+    "district": "Dumka",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "east singhbum": {
+    "district": "East Singhbum",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "garhwa": {
+    "district": "Garhwa",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "giridih": {
+    "district": "Giridih",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "godda": {
+    "district": "Godda",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "gumla": {
+    "district": "Gumla",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "hazaribagh": {
+    "district": "Hazaribagh",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "jamtara": {
+    "district": "Jamtara",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "khunti": {
+    "district": "Khunti",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "koderma": {
+    "district": "Koderma",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "latehar": {
+    "district": "Latehar",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "lohardaga": {
+    "district": "Lohardaga",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "pakur": {
+    "district": "Pakur",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "palamu": {
+    "district": "Palamu",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "ramgarh": {
+    "district": "Ramgarh",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "ranchi": {
+    "district": "Ranchi",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "sahebganj": {
+    "district": "Sahebganj",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "saraikela kharsawan": {
+    "district": "Saraikela Kharsawan",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "simdega": {
+    "district": "Simdega",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "west singhbhum": {
+    "district": "West Singhbhum",
+    "state": "Jharkhand",
+    "prant": "Jharkhand",
+    "kshetra": " Bihar kshetra"
+  },
+  "bagalkote": {
+    "district": "Bagalkote",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "ballari": {
+    "district": "Ballari",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "belagavi": {
+    "district": "Belagavi",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "bengaluru rural": {
+    "district": "Bengaluru Rural",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "bengaluru urban": {
+    "district": "Bengaluru Urban",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "bidar": {
+    "district": "Bidar",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "chamarajanagara": {
+    "district": "Chamarajanagara",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "chikkaballapura": {
+    "district": "Chikkaballapura",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "chikkamagaluru": {
+    "district": "Chikkamagaluru",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "chitradurga": {
+    "district": "Chitradurga",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "dakshina kannada": {
+    "district": "Dakshina Kannada",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "davangere": {
+    "district": "Davangere",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "dharwad": {
+    "district": "Dharwad",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "gadag": {
+    "district": "Gadag",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "hassan": {
+    "district": "Hassan",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "haveri": {
+    "district": "Haveri",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "kalaburagi": {
+    "district": "Kalaburagi",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "kodagu": {
+    "district": "Kodagu",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "kolar": {
+    "district": "Kolar",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "koppal": {
+    "district": "Koppal",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "mandya": {
+    "district": "Mandya",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "mysuru": {
+    "district": "Mysuru",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "raichur": {
+    "district": "Raichur",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "ramanagara": {
+    "district": "Ramanagara",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "shivamogga": {
+    "district": "Shivamogga",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "tumakuru": {
+    "district": "Tumakuru",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "udupi": {
+    "district": "Udupi",
+    "state": "Karnataka",
+    "prant": "South Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "uttara kannada": {
+    "district": "Uttara Kannada",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "vijayapura": {
+    "district": "Vijayapura",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "yadgir": {
+    "district": "Yadgir",
+    "state": "Karnataka",
+    "prant": "North Karnataka",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "alappuzha": {
+    "district": "Alappuzha",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "ernakulam": {
+    "district": "Ernakulam",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "idukki": {
+    "district": "Idukki",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kannur": {
+    "district": "Kannur",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kasaragod": {
+    "district": "Kasaragod",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kollam": {
+    "district": "Kollam",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kottayam": {
+    "district": "Kottayam",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kozhikode": {
+    "district": "Kozhikode",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "malappuram": {
+    "district": "Malappuram",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "palakkad": {
+    "district": "Palakkad",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "pathanamthitta": {
+    "district": "Pathanamthitta",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "thiruvananthapuram": {
+    "district": "Thiruvananthapuram",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "thrissur": {
+    "district": "Thrissur",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "wayanad": {
+    "district": "Wayanad",
+    "state": "Kerala",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kargil": {
+    "district": "Kargil",
+    "state": "Ladakh",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "leh ladakh": {
+    "district": "Leh Ladakh",
+    "state": "Ladakh",
+    "prant": "Jammu Kashmir",
+    "kshetra": " Uttar kshetra"
+  },
+  "lakshadweep district": {
+    "district": "Lakshadweep District",
+    "state": "Lakshadweep",
+    "prant": "Keral",
+    "kshetra": " Dakshin kshetra"
+  },
+  "agar malwa": {
+    "district": "Agar Malwa",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "alirajpur": {
+    "district": "Alirajpur",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "anuppur": {
+    "district": "Anuppur",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "ashoknagar": {
+    "district": "Ashoknagar",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "balaghat": {
+    "district": "Balaghat",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "barwani": {
+    "district": "Barwani",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "betul": {
+    "district": "Betul",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "bhind": {
+    "district": "Bhind",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "bhopal": {
+    "district": "Bhopal",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "burhanpur": {
+    "district": "Burhanpur",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "chhatarpur": {
+    "district": "Chhatarpur",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "chhindwara": {
+    "district": "Chhindwara",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "damoh": {
+    "district": "Damoh",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "datia": {
+    "district": "Datia",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "dewas": {
+    "district": "Dewas",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "dhar": {
+    "district": "Dhar",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "dindori": {
+    "district": "Dindori",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "east nimar": {
+    "district": "East Nimar",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "guna": {
+    "district": "Guna",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "gwalior": {
+    "district": "Gwalior",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "harda": {
+    "district": "Harda",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "hoshangabad": {
+    "district": "Hoshangabad",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "indore": {
+    "district": "Indore",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "jabalpur": {
+    "district": "Jabalpur",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "jhabua": {
+    "district": "Jhabua",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "katni": {
+    "district": "Katni",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "khargone": {
+    "district": "Khargone",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "mandla": {
+    "district": "Mandla",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "mandsaur": {
+    "district": "Mandsaur",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "morena": {
+    "district": "Morena",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "narsinghpur": {
+    "district": "Narsinghpur",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "neemuch": {
+    "district": "Neemuch",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "niwari": {
+    "district": "Niwari",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "panna": {
+    "district": "Panna",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "raisen": {
+    "district": "Raisen",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "rajgarh": {
+    "district": "Rajgarh",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "ratlam": {
+    "district": "Ratlam",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "rewa": {
+    "district": "Rewa",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "sagar": {
+    "district": "Sagar",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "satna": {
+    "district": "Satna",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "sehore": {
+    "district": "Sehore",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "seoni": {
+    "district": "Seoni",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "shahdol": {
+    "district": "Shahdol",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "shajapur": {
+    "district": "Shajapur",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "sheopur": {
+    "district": "Sheopur",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "shivpuri": {
+    "district": "Shivpuri",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "sidhi": {
+    "district": "Sidhi",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "singrauli": {
+    "district": "Singrauli",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "tikamgarh": {
+    "district": "Tikamgarh",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "ujjain": {
+    "district": "Ujjain",
+    "state": "Madhya Pradesh",
+    "prant": "Malawa",
+    "kshetra": " Madhya kshetra"
+  },
+  "umaria": {
+    "district": "Umaria",
+    "state": "Madhya Pradesh",
+    "prant": "Maha Kaushal",
+    "kshetra": " Madhya kshetra"
+  },
+  "vidisha": {
+    "district": "Vidisha",
+    "state": "Madhya Pradesh",
+    "prant": "Madhya Bharat",
+    "kshetra": " Madhya kshetra"
+  },
+  "ahmednagar": {
+    "district": "Ahmednagar",
+    "state": "Maharashtra",
+    "prant": "West Maharashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "akola": {
+    "district": "Akola",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "amravati": {
+    "district": "Amravati",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "aurangabad": {
+    "district": "Aurangabad",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "beed": {
+    "district": "Beed",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "bhandara": {
+    "district": "Bhandara",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "buldhana": {
+    "district": "Buldhana",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "chandrapur": {
+    "district": "Chandrapur",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "dhule": {
+    "district": "Dhule",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "gadchiroli": {
+    "district": "Gadchiroli",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "gondia": {
+    "district": "Gondia",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "hingoli": {
+    "district": "Hingoli",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "jalgaon": {
+    "district": "Jalgaon",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "jalna": {
+    "district": "Jalna",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "kolhapur": {
+    "district": "Kolhapur",
+    "state": "Maharashtra",
+    "prant": "West Maharashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "latur": {
+    "district": "Latur",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "mumbai": {
+    "district": "Mumbai",
+    "state": "Maharashtra",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "mumbai suburban": {
+    "district": "Mumbai Suburban",
+    "state": "Maharashtra",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "nagpur": {
+    "district": "Nagpur",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "nanded": {
+    "district": "Nanded",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "nandurbar": {
+    "district": "Nandurbar",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "nashik": {
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "prant": "West Maharashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "osmanabad": {
+    "district": "Osmanabad",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "palghar": {
+    "district": "Palghar",
+    "state": "Maharashtra",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "parbhani": {
+    "district": "Parbhani",
+    "state": "Maharashtra",
+    "prant": "Devgiri",
+    "kshetra": " pashchim kshetra"
+  },
+  "pune": {
+    "district": "Pune",
+    "state": "Maharashtra",
+    "prant": "West Maharashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "raigad": {
+    "district": "Raigad",
+    "state": "Maharashtra",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "ratnagiri": {
+    "district": "Ratnagiri",
+    "state": "Maharashtra",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "sangli": {
+    "district": "Sangli",
+    "state": "Maharashtra",
+    "prant": "West Maharashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "satara": {
+    "district": "Satara",
+    "state": "Maharashtra",
+    "prant": "West Maharashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "sindhudurg": {
+    "district": "Sindhudurg",
+    "state": "Maharashtra",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "solapur": {
+    "district": "Solapur",
+    "state": "Maharashtra",
+    "prant": "West Maharashtra",
+    "kshetra": " pashchim kshetra"
+  },
+  "thane": {
+    "district": "Thane",
+    "state": "Maharashtra",
+    "prant": "Kokan",
+    "kshetra": " pashchim kshetra"
+  },
+  "wardha": {
+    "district": "Wardha",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "washim": {
+    "district": "Washim",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "yavatmal": {
+    "district": "Yavatmal",
+    "state": "Maharashtra",
+    "prant": "Vidarbh",
+    "kshetra": " pashchim kshetra"
+  },
+  "bishnupur": {
+    "district": "Bishnupur",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "chandel": {
+    "district": "Chandel",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "churachandpur": {
+    "district": "Churachandpur",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "imphal east": {
+    "district": "Imphal East",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "imphal west": {
+    "district": "Imphal West",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "jiribam": {
+    "district": "Jiribam",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "kakching": {
+    "district": "Kakching",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "kamjong": {
+    "district": "Kamjong",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "kangpokpi": {
+    "district": "Kangpokpi",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "noney": {
+    "district": "Noney",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "pherzawl": {
+    "district": "Pherzawl",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "senapati": {
+    "district": "Senapati",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "tamenglong": {
+    "district": "Tamenglong",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "tengnoupal": {
+    "district": "Tengnoupal",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "thoubal": {
+    "district": "Thoubal",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "ukhrul": {
+    "district": "Ukhrul",
+    "state": "Manipur",
+    "prant": "Manipur",
+    "kshetra": " Assam kshetra"
+  },
+  "east garo hills": {
+    "district": "East Garo Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "east jaintia hills": {
+    "district": "East Jaintia Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "east khasi hills": {
+    "district": "East Khasi Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "north garo hills": {
+    "district": "North Garo Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "ri bhoi": {
+    "district": "Ri Bhoi",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "south garo hills": {
+    "district": "South Garo Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "south west garo hills": {
+    "district": "South West Garo Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "south west khasi hills": {
+    "district": "South West Khasi Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "west garo hills": {
+    "district": "West Garo Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "west jaintia hills": {
+    "district": "West Jaintia Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "west khasi hills": {
+    "district": "West Khasi Hills",
+    "state": "Meghalaya",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "aizawl": {
+    "district": "Aizawl",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "champhai": {
+    "district": "Champhai",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "hnahthial": {
+    "district": "Hnahthial",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "khawzawl": {
+    "district": "Khawzawl",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "kolasib": {
+    "district": "Kolasib",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "lawngtlai": {
+    "district": "Lawngtlai",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "lunglei": {
+    "district": "Lunglei",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "mamit": {
+    "district": "Mamit",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "saiha": {
+    "district": "Saiha",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "saitual": {
+    "district": "Saitual",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "serchhip": {
+    "district": "Serchhip",
+    "state": "Mizoram",
+    "prant": "South Assam",
+    "kshetra": " Assam kshetra"
+  },
+  "dimapur": {
+    "district": "Dimapur",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "kiphire": {
+    "district": "Kiphire",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "kohima": {
+    "district": "Kohima",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "longleng": {
+    "district": "Longleng",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "mokokchung": {
+    "district": "Mokokchung",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "mon": {
+    "district": "Mon",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "noklak": {
+    "district": "Noklak",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "peren": {
+    "district": "Peren",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "phek": {
+    "district": "Phek",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "tuensang": {
+    "district": "Tuensang",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "wokha": {
+    "district": "Wokha",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "zunheboto": {
+    "district": "Zunheboto",
+    "state": "Nagaland",
+    "prant": "North Assam",
+    "kshetra": " Purvi kshetra"
+  },
+  "not-applicable": {
+    "district": "Not-Applicable",
+    "state": "NRI"
+  },
+  "anugul": {
+    "district": "Anugul",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "balangir": {
+    "district": "Balangir",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "baleshwar": {
+    "district": "Baleshwar",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "bargarh": {
+    "district": "Bargarh",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "bhadrak": {
+    "district": "Bhadrak",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "boudh": {
+    "district": "Boudh",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "cuttack": {
+    "district": "Cuttack",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "deogarh": {
+    "district": "Deogarh",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "dhenkanal": {
+    "district": "Dhenkanal",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "gajapati": {
+    "district": "Gajapati",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "ganjam": {
+    "district": "Ganjam",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "jagatsinghapur": {
+    "district": "Jagatsinghapur",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "jajapur": {
+    "district": "Jajapur",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "jharsuguda": {
+    "district": "Jharsuguda",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "kalahandi": {
+    "district": "Kalahandi",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "kandhamal": {
+    "district": "Kandhamal",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "kendrapara": {
+    "district": "Kendrapara",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "kendujhar": {
+    "district": "Kendujhar",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "khordha": {
+    "district": "Khordha",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "koraput": {
+    "district": "Koraput",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "malkangiri": {
+    "district": "Malkangiri",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "mayurbhanj": {
+    "district": "Mayurbhanj",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "nabarangpur": {
+    "district": "Nabarangpur",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "nayagarh": {
+    "district": "Nayagarh",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "nuapada": {
+    "district": "Nuapada",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "puri": {
+    "district": "Puri",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "rayagada": {
+    "district": "Rayagada",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "sambalpur": {
+    "district": "Sambalpur",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "sonepur": {
+    "district": "Sonepur",
+    "state": "Odisha",
+    "prant": "East Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "sundargarh": {
+    "district": "Sundargarh",
+    "state": "Odisha",
+    "prant": "West Odisha",
+    "kshetra": " Purvi kshetra"
+  },
+  "karaikal": {
+    "district": "Karaikal",
+    "state": "Puducherry",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "mahe": {
+    "district": "Mahe",
+    "state": "Puducherry",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "pondicherry": {
+    "district": "Pondicherry",
+    "state": "Puducherry",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "yanam": {
+    "district": "Yanam",
+    "state": "Puducherry",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "amritsar": {
+    "district": "Amritsar",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "barnala": {
+    "district": "Barnala",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "bathinda": {
+    "district": "Bathinda",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "faridkot": {
+    "district": "Faridkot",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "fatehgarh sahib": {
+    "district": "Fatehgarh Sahib",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "fazilka": {
+    "district": "Fazilka",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "firozepur": {
+    "district": "Firozepur",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "gurdaspur": {
+    "district": "Gurdaspur",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "hoshiarpur": {
+    "district": "Hoshiarpur",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "jalandhar": {
+    "district": "Jalandhar",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "kapurthala": {
+    "district": "Kapurthala",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "ludhiana": {
+    "district": "Ludhiana",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "malerkotla": {
+    "district": "Malerkotla",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "mansa": {
+    "district": "Mansa",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "moga": {
+    "district": "Moga",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "pathankot": {
+    "district": "Pathankot",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "patiala": {
+    "district": "Patiala",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "rupnagar": {
+    "district": "Rupnagar",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "s.a.s nagar": {
+    "district": "S.A.S Nagar",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "sangrur": {
+    "district": "Sangrur",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "shahid bhagat singh nagar": {
+    "district": "Shahid Bhagat Singh Nagar",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "sri muktsar sahib": {
+    "district": "Sri Muktsar Sahib",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "tarn taran": {
+    "district": "Tarn Taran",
+    "state": "Punjab",
+    "prant": "Punjab",
+    "kshetra": " Uttar kshetra"
+  },
+  "ajmer": {
+    "district": "Ajmer",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "alwar": {
+    "district": "Alwar",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "banswara": {
+    "district": "Banswara",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "baran": {
+    "district": "Baran",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "barmer": {
+    "district": "Barmer",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "bharatpur": {
+    "district": "Bharatpur",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "bhilwara": {
+    "district": "Bhilwara",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "bikaner": {
+    "district": "Bikaner",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "bundi": {
+    "district": "Bundi",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "chittorgarh": {
+    "district": "Chittorgarh",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "churu": {
+    "district": "Churu",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "dausa": {
+    "district": "Dausa",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "dholpur": {
+    "district": "Dholpur",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "dungarpur": {
+    "district": "Dungarpur",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "ganganagar": {
+    "district": "Ganganagar",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "hanumangarh": {
+    "district": "Hanumangarh",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "jaipur": {
+    "district": "Jaipur",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "jaisalmer": {
+    "district": "Jaisalmer",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "jalore": {
+    "district": "Jalore",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "jhalawar": {
+    "district": "Jhalawar",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "jhunjhunu": {
+    "district": "Jhunjhunu",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "jodhpur": {
+    "district": "Jodhpur",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "karauli": {
+    "district": "Karauli",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "kota": {
+    "district": "Kota",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "nagaur": {
+    "district": "Nagaur",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "pali": {
+    "district": "Pali",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "rajsamand": {
+    "district": "Rajsamand",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "sawai madhopur": {
+    "district": "Sawai Madhopur",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "sikar": {
+    "district": "Sikar",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "sirohi": {
+    "district": "Sirohi",
+    "state": "Rajasthan",
+    "prant": "Jodpur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "tonk": {
+    "district": "Tonk",
+    "state": "Rajasthan",
+    "prant": "Jaipur",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "udaipur": {
+    "district": "Udaipur",
+    "state": "Rajasthan",
+    "prant": "Chittodgarh",
+    "kshetra": " Uttar pashchim kshetra( Rajashan )"
+  },
+  "east district": {
+    "district": "East District",
+    "state": "Sikkim",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "north district": {
+    "district": "North District",
+    "state": "Sikkim",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "south district": {
+    "district": "South District",
+    "state": "Sikkim",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "west district": {
+    "district": "West District",
+    "state": "Sikkim",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "ariyalur": {
+    "district": "Ariyalur",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "chengalpattu": {
+    "district": "Chengalpattu",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "chennai": {
+    "district": "Chennai",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "coimbatore": {
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "cuddalore": {
+    "district": "Cuddalore",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "dharmapuri": {
+    "district": "Dharmapuri",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "dindigul": {
+    "district": "Dindigul",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "erode": {
+    "district": "Erode",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kallakurichi": {
+    "district": "Kallakurichi",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kanchipuram": {
+    "district": "Kanchipuram",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "kanniyakumari": {
+    "district": "Kanniyakumari",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "karur": {
+    "district": "Karur",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "krishnagiri": {
+    "district": "Krishnagiri",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "madurai": {
+    "district": "Madurai",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "mayiladuthurai": {
+    "district": "Mayiladuthurai",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "nagapattinam": {
+    "district": "Nagapattinam",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "namakkal": {
+    "district": "Namakkal",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "perambalur": {
+    "district": "Perambalur",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "pudukkottai": {
+    "district": "Pudukkottai",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "ramanathapuram": {
+    "district": "Ramanathapuram",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "ranipet": {
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "salem": {
+    "district": "Salem",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "sivaganga": {
+    "district": "Sivaganga",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "tenkasi": {
+    "district": "Tenkasi",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "thanjavur": {
+    "district": "Thanjavur",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "the nilgiris": {
+    "district": "The Nilgiris",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "theni": {
+    "district": "Theni",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "thiruvallur": {
+    "district": "Thiruvallur",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "thiruvarur": {
+    "district": "Thiruvarur",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "tiruchirappalli": {
+    "district": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "tirunelveli": {
+    "district": "Tirunelveli",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "tirupathur": {
+    "district": "Tirupathur",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "tiruppur": {
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "tiruvannamalai": {
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "tuticorin": {
+    "district": "Tuticorin",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "vellore": {
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "villupuram": {
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "prant": "North Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "virudhunagar": {
+    "district": "Virudhunagar",
+    "state": "Tamil Nadu",
+    "prant": "South Tamilnadu",
+    "kshetra": " Dakshin kshetra"
+  },
+  "adilabad": {
+    "district": "Adilabad",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "bhadradri kothagudem": {
+    "district": "Bhadradri Kothagudem",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "hyderabad": {
+    "district": "Hyderabad",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "jagitial": {
+    "district": "Jagitial",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "jangoan": {
+    "district": "Jangoan",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "jayashankar bhupalapally": {
+    "district": "Jayashankar Bhupalapally",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "jogulamba gadwal": {
+    "district": "Jogulamba Gadwal",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "kamareddy": {
+    "district": "Kamareddy",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "karimnagar": {
+    "district": "Karimnagar",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "khammam": {
+    "district": "Khammam",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "kumuram bheem asifabad": {
+    "district": "Kumuram Bheem Asifabad",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "mahabubabad": {
+    "district": "Mahabubabad",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "mahabubnagar": {
+    "district": "Mahabubnagar",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "mancherial": {
+    "district": "Mancherial",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "medak": {
+    "district": "Medak",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "medchal malkajgiri": {
+    "district": "Medchal Malkajgiri",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "mulugu": {
+    "district": "Mulugu",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "nagarkurnool": {
+    "district": "Nagarkurnool",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "nalgonda": {
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "narayanpet": {
+    "district": "Narayanpet",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "nirmal": {
+    "district": "Nirmal",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "nizamabad": {
+    "district": "Nizamabad",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "peddapalli": {
+    "district": "Peddapalli",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "rajanna sircilla": {
+    "district": "Rajanna Sircilla",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "ranga reddy": {
+    "district": "Ranga Reddy",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "sangareddy": {
+    "district": "Sangareddy",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "siddipet": {
+    "district": "Siddipet",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "suryapet": {
+    "district": "Suryapet",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "vikarabad": {
+    "district": "Vikarabad",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "wanaparthy": {
+    "district": "Wanaparthy",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "warangal rural": {
+    "district": "Warangal Rural",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "warangal urban": {
+    "district": "Warangal Urban",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "yadadri bhuvanagiri": {
+    "district": "Yadadri Bhuvanagiri",
+    "state": "Telangana",
+    "prant": "Telangana",
+    "kshetra": "Dakshin Madhya kshetra"
+  },
+  "dadra and nagar haveli": {
+    "district": "Dadra And Nagar Haveli",
+    "state": "The Dadra And Nagar Haveli And Daman And Diu",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "daman": {
+    "district": "Daman",
+    "state": "The Dadra And Nagar Haveli And Daman And Diu",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "diu": {
+    "district": "Diu",
+    "state": "The Dadra And Nagar Haveli And Daman And Diu",
+    "prant": "Gujrath",
+    "kshetra": " pashchim kshetra"
+  },
+  "dhalai": {
+    "district": "Dhalai",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "gomati": {
+    "district": "Gomati",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "khowai": {
+    "district": "Khowai",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "north tripura": {
+    "district": "North Tripura",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "sepahijala": {
+    "district": "Sepahijala",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "south tripura": {
+    "district": "South Tripura",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "unakoti": {
+    "district": "Unakoti",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "west tripura": {
+    "district": "West Tripura",
+    "state": "Tripura",
+    "prant": "Tripura",
+    "kshetra": " Assam kshetra"
+  },
+  "agra": {
+    "district": "Agra",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "aligarh": {
+    "district": "Aligarh",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "ambedkar nagar": {
+    "district": "Ambedkar Nagar",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "amethi": {
+    "district": "Amethi",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "amroha": {
+    "district": "Amroha",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "auraiya": {
+    "district": "Auraiya",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "ayodhya": {
+    "district": "Ayodhya",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "azamgarh": {
+    "district": "Azamgarh",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "baghpat": {
+    "district": "Baghpat",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "bahraich": {
+    "district": "Bahraich",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "ballia": {
+    "district": "Ballia",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "balrampur": {
+    "district": "Balrampur",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "banda": {
+    "district": "Banda",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "barabanki": {
+    "district": "Barabanki",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "bareilly": {
+    "district": "Bareilly",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "basti": {
+    "district": "Basti",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "bhadohi": {
+    "district": "Bhadohi",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "bijnor": {
+    "district": "Bijnor",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "budaun": {
+    "district": "Budaun",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "bulandshahr": {
+    "district": "Bulandshahr",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "chandauli": {
+    "district": "Chandauli",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "chitrakoot": {
+    "district": "Chitrakoot",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "deoria": {
+    "district": "Deoria",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "etah": {
+    "district": "Etah",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "etawah": {
+    "district": "Etawah",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "farrukhabad": {
+    "district": "Farrukhabad",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "fatehpur": {
+    "district": "Fatehpur",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "firozabad": {
+    "district": "Firozabad",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "gautam buddha nagar": {
+    "district": "Gautam Buddha Nagar",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "ghaziabad": {
+    "district": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "ghazipur": {
+    "district": "Ghazipur",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "gonda": {
+    "district": "Gonda",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "gorakhpur": {
+    "district": "Gorakhpur",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "hamirpur": {
+    "district": "Hamirpur",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "hapur": {
+    "district": "Hapur",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "hardoi": {
+    "district": "Hardoi",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "hathras": {
+    "district": "Hathras",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "jalaun": {
+    "district": "Jalaun",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "jaunpur": {
+    "district": "Jaunpur",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "jhansi": {
+    "district": "Jhansi",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "kannauj": {
+    "district": "Kannauj",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "kanpur dehat": {
+    "district": "Kanpur Dehat",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "kanpur nagar": {
+    "district": "Kanpur Nagar",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "kasganj": {
+    "district": "Kasganj",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "kaushambi": {
+    "district": "Kaushambi",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "kheri": {
+    "district": "Kheri",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "kushi nagar": {
+    "district": "Kushi Nagar",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "lalitpur": {
+    "district": "Lalitpur",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "lucknow": {
+    "district": "Lucknow",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "maharajganj": {
+    "district": "Maharajganj",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "mahoba": {
+    "district": "Mahoba",
+    "state": "Uttar Pradesh",
+    "prant": "Kanpur",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "mainpuri": {
+    "district": "Mainpuri",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "mathura": {
+    "district": "Mathura",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "mau": {
+    "district": "Mau",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "meerut": {
+    "district": "Meerut",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "mirzapur": {
+    "district": "Mirzapur",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "moradabad": {
+    "district": "Moradabad",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "muzaffarnagar": {
+    "district": "Muzaffarnagar",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "pilibhit": {
+    "district": "Pilibhit",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "pratapgarh": {
+    "district": "Pratapgarh",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "prayagraj": {
+    "district": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "rae bareli": {
+    "district": "Rae Bareli",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "rampur": {
+    "district": "Rampur",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "saharanpur": {
+    "district": "Saharanpur",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "sambhal": {
+    "district": "Sambhal",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "sant kabeer nagar": {
+    "district": "Sant Kabeer Nagar",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "shahjahanpur": {
+    "district": "Shahjahanpur",
+    "state": "Uttar Pradesh",
+    "prant": "Brij",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "shamli": {
+    "district": "Shamli",
+    "state": "Uttar Pradesh",
+    "prant": "Merat",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "shravasti": {
+    "district": "Shravasti",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "siddharth nagar": {
+    "district": "Siddharth Nagar",
+    "state": "Uttar Pradesh",
+    "prant": "Gorksh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "sitapur": {
+    "district": "Sitapur",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "sonbhadra": {
+    "district": "Sonbhadra",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "sultanpur": {
+    "district": "Sultanpur",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "unnao": {
+    "district": "Unnao",
+    "state": "Uttar Pradesh",
+    "prant": "Awadh",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "varanasi": {
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "prant": "Kashi",
+    "kshetra": " Purv Uttar paradesh kshetra"
+  },
+  "almora": {
+    "district": "Almora",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "bageshwar": {
+    "district": "Bageshwar",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "chamoli": {
+    "district": "Chamoli",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "champawat": {
+    "district": "Champawat",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "dehradun": {
+    "district": "Dehradun",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "haridwar": {
+    "district": "Haridwar",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "nainital": {
+    "district": "Nainital",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "pauri garhwal": {
+    "district": "Pauri Garhwal",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "pithoragarh": {
+    "district": "Pithoragarh",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "rudra prayag": {
+    "district": "Rudra Prayag",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "tehri garhwal": {
+    "district": "Tehri Garhwal",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "udam singh nagar": {
+    "district": "Udam Singh Nagar",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "uttar kashi": {
+    "district": "Uttar Kashi",
+    "state": "Uttarakhand",
+    "prant": "Uttarakhand",
+    "kshetra": " pashchi Uttar pradesh kshetra"
+  },
+  "24 paraganas north": {
+    "district": "24 Paraganas North",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "24 paraganas south": {
+    "district": "24 Paraganas South",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "alipurduar": {
+    "district": "Alipurduar",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "bankura": {
+    "district": "Bankura",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "birbhum": {
+    "district": "Birbhum",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "coochbehar": {
+    "district": "Coochbehar",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "darjeeling": {
+    "district": "Darjeeling",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "dinajpur dakshin": {
+    "district": "Dinajpur Dakshin",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "dinajpur uttar": {
+    "district": "Dinajpur Uttar",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "hooghly": {
+    "district": "Hooghly",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "howrah": {
+    "district": "Howrah",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "jalpaiguri": {
+    "district": "Jalpaiguri",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "jhargram": {
+    "district": "Jhargram",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "kalimpong": {
+    "district": "Kalimpong",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "kolkata": {
+    "district": "Kolkata",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "maldah": {
+    "district": "Maldah",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "medinipur east": {
+    "district": "Medinipur East",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "medinipur west": {
+    "district": "Medinipur West",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "murshidabad": {
+    "district": "Murshidabad",
+    "state": "West Bengal",
+    "prant": "North Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "nadia": {
+    "district": "Nadia",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "paschim bardhaman": {
+    "district": "Paschim Bardhaman",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "purba bardhaman": {
+    "district": "Purba Bardhaman",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  },
+  "purulia": {
+    "district": "Purulia",
+    "state": "West Bengal",
+    "prant": "South Bangal",
+    "kshetra": " Purvi kshetra"
+  }
+}
