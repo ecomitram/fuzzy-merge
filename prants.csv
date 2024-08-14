@@ -338,7 +338,7 @@ Madhya Pradesh,Indore,Malawa
 Madhya Pradesh,Jabalpur,Maha Kaushal
 Madhya Pradesh,Jhabua,Malawa
 Madhya Pradesh,Katni,Malawa
-Madhya Pradesh,Khandwa,Malawa
+Madhya Pradesh,East Nimar,Malawa
 Madhya Pradesh,Khargone,Malawa
 Madhya Pradesh,Mandla,Maha Kaushal
 Madhya Pradesh,Mandsaur,Malawa
@@ -436,6 +436,9 @@ Mizoram,Lunglei,South Assam
 Mizoram,Mamit,South Assam
 Mizoram,Saiha,South Assam
 Mizoram,Serchhip,South Assam
+Mizoram,Hnahthial,South Assam
+Mizoram,Khawzawl,South Assam
+Mizoram,Saitual,South Assam
 Nagaland,Dimapur,North Assam
 Nagaland,Kiphire,North Assam
 Nagaland,Kohima,North Assam
@@ -496,6 +499,7 @@ Punjab,Kapurthala,Punjab
 Punjab,Ludhiana,Punjab
 Punjab,Mansa,Punjab
 Punjab,Moga,Punjab
+Punjab,Malerkotla,Punjab
 Punjab,S.A.S Nagar,Punjab
 Punjab,Sri Muktsar Sahib,Punjab
 Punjab,Pathankot,Punjab
@@ -555,6 +559,7 @@ Tamil Nadu,kanniyakumari,South Tamilnadu
 Tamil Nadu,Karur,North Tamilnadu
 Tamil Nadu,Krishnagiri,North Tamilnadu
 Tamil Nadu,Madurai,South Tamilnadu
+Tamil Nadu,Mayiladuthurai,South Tamilnadu
 Tamil Nadu,Nagapattinam,South Tamilnadu
 Tamil Nadu,Namakkal,North Tamilnadu
 Tamil Nadu,The Nilgiris,South Tamilnadu
