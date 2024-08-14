@@ -1,9 +1,10 @@
 const fs = require("fs");
 const csvParse = require("csv-parse");
 const FuzzySet = require("fuzzyset");
+const districtsMap = require('./mapper.json');
+const { exit } = require("process");
 
-
-
+console.log('districtsMap: ', districtsMap);
 const finalData = {};
 function saveRecord(row, matchedName)
 {
@@ -30,16 +31,13 @@ function cleanName(name, city) {
   //remove city names
   name = name.replaceAll(city.toLowerCase(), "");
 
-  //remove school
+  //remove school word
   name = name.replaceAll('school', "");
 
   //remove non alpha-numeric, with space
   name = name.replace("/[^a-z0-9 ]/g", " ");
-
+  
   name = name.trim();
-
-
-
   return name;
 }
 
@@ -71,7 +69,7 @@ function mergeRecords(csvData) {
         index,
         "  Normalized: ",
         Object.values(finalData).length,
-        "  Percentage:", 100 * Object.values(finalData).length / index
+        "  Percentage:", (100 * Object.values(finalData).length / index).toFixed(2)
       );
     }
     // Check if there is a fuzzy match for the name
