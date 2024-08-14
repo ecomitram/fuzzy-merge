@@ -4,6 +4,7 @@ const FuzzySet = require("fuzzyset");
 let districtsMap = require('./mapper.json');
 const { exit } = require("process");
 const { count } = require("console");
+const { normalize } = require("path");
 
 districtsMap[''] = districtsMap['BLANK'] = {
   district: 'BLANK',
@@ -11,6 +12,54 @@ districtsMap[''] = districtsMap['BLANK'] = {
   prant: 'BLANK',
   kshetra: 'BLANK'
 };
+
+function cleanInstituteName(name, city) {
+  name = name.trim();
+
+  //lowercase
+  name = name.toLowerCase();
+
+  name = name.replaceAll('-', ' ')
+  name = name.replaceAll('.', ' ')
+  name = name.replaceAll('"', '')
+  name = name.replaceAll(',', '')
+
+  //remove city names
+  name = name.replaceAll(city.toLowerCase(), "");
+
+  //remove school word
+  name = name.replaceAll('school', "");
+
+  //remove non alpha-numeric, with space
+  name = name.replace("/[^a-z0-9 ]/g", " ");
+
+  name = name.trim();
+  return name;
+}
+
+const cityFuzzyMap = {};
+function getFuzzyMap(city) {
+  //use seperate fuzzyset for every city
+  let fuzzyMapKey = `${city}`;
+  if (cityFuzzyMap[fuzzyMapKey] === undefined) {
+    cityFuzzyMap[fuzzyMapKey] = FuzzySet();
+  }
+
+  return cityFuzzyMap[fuzzyMapKey];
+}
+
+function normalizeInstitute(institute, city) {
+  let name = cleanInstituteName(institute, city);
+
+  const fuzzyMap = getFuzzyMap(city);
+  matches = fuzzyMap.get(name, null, 0.85);
+  if (matches) {
+    return matches[0][1];
+  }else{
+    fuzzyMap.add(name);
+    return name;
+  }
+}
 
 function cleanDistrictName(name) {
   name = name.trim();
@@ -34,14 +83,18 @@ const reportData = {
 };
 
 function addToReport(report, record) {
-
-  let data = report.keyFields.map(keyField => record[keyField]);
-  let key = data.join(',');
-
   // check if record should be included in report
   if (report.check && !report.check(record)) {
     return;
   }
+
+  // preprocess record
+  if(report.preprocess){
+    record = report.preprocess(record);
+  }
+
+  let data = report.keyFields.map(keyField => record[keyField]);
+  let key = data.join(',');
 
   const incrementBy = 1;
 
@@ -104,6 +157,7 @@ function prepareStats(csvData, report) {
     score = parseInt(score.trim() || 0);
 
     const record = {
+      institute: institute,
       grade: grade,
       city: city,
       state: state,
@@ -116,6 +170,9 @@ function prepareStats(csvData, report) {
 
     addToReport(report, record);
     counter++;
+    if (counter % 1000 === 0) {
+      console.log('Processed records: ', counter);
+    }
   }
 
   console.log('Total records: ', counter);
@@ -158,15 +215,39 @@ fs.readFile("input/nspc.csv", "utf8", (err, data) => {
     //   keyFields: ['prant', 'grade'],
     //   dataFields: ['prant', 'grade'],
     // },
+    // {
+    //   name: 'grade-wise-20-scorer',
+    //   keyFields: [ 'grade'],
+    //   dataFields: [ 'grade'],
+    //   check: (record) => {
+    //     return record.score == 20;
+    //   }
+    // },
+    // {
+    //   name: 'institute-wise-clean-name',
+    //   keyFields: ['institute'],
+    //   dataFields: ['institute'],
+    //     preprocess: (record) => {
+    //       record.institute = cleanInstituteName(record.institute, record.city);
+    //       return record;
+    //   }
+    // },
     {
-      name: 'prant-grade-wise-20-scorer',
-      keyFields: ['prant', 'grade', 'score'],
-      dataFields: ['prant', 'grade'],
-      check: (record) => {
-        return record.score >= 20;
+      name: 'institute-wise-normalized-name',
+      keyFields: ['normalizeInstitute'],
+      dataFields: ['institute','normalizeInstitute','district'],
+        preprocess: (record) => {
+          record.normalizeInstitute = normalizeInstitute(record.institute, record.city);
+          return record;
       }
     },
     
+    // {
+    //   name: 'institute-wise',
+    //   keyFields: ['institute'],
+    //   dataFields: ['institute', 'district', 'prant', 'kshetra'],
+    // },
+
   ];
 
 
