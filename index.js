@@ -33,6 +33,11 @@ function cleanInstituteName(name, city) {
   //remove non alpha-numeric, with space
   name = name.replace("/[^a-z0-9 ]/g", " ");
 
+  //if all numbers, remove
+  if (/^\d+$/.test(name)) {
+    return 'Invalid';
+  }
+
   name = name.trim();
   return name;
 }
@@ -126,11 +131,11 @@ function saveReport(report) {
 
   fs.writeFileSync(
     `output/report-${report.name}.csv`,
-    report.keyFields.join('-') + ',' + report.dataFields.join(',') + ',count\n' +
+    report.dataFields.join(',') + ',count\n' +
     Object.values(dataStore)
       .map(function (record) {
         let data = report.dataFields.map(dataField => record[dataField]);
-        let ret = `${record.key},${data.join(',')},${record.count}`;
+        let ret = `${data.join(',')},${record.count}`;
         return ret;
       })
       .join("\n")
@@ -163,7 +168,7 @@ function prepareStats(csvData, report) {
       grade: grade,
       city: city,
       state: state,
-      count: count,
+      gender:gender,
       score: score,
       district: district,
       prant: prant,
@@ -172,9 +177,9 @@ function prepareStats(csvData, report) {
 
     addToReport(report, record);
     counter++;
-    if (counter % 1000 === 0) {
-      console.log('Processed records: ', counter);
-    }
+    // if (counter % 1000 === 0) {
+    //   console.log('Processed records: ', counter);
+    // }
   }
 
   console.log('Total records: ', counter);
@@ -226,9 +231,39 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
       }
     },
     {
+      name: 'gender-wise',
+      keyFields: [ 'gender'],
+      dataFields: [ 'gender'],
+    },
+    {
+      name: 'score-wise',
+      keyFields: [ 'score'],
+      dataFields: [ 'score'],
+      check: (record) => {
+        return record.score <= 20;
+      }
+    },
+    {
+      name: 'grade-gender-wise',
+      keyFields: ['grade','gender'],
+      dataFields: ['grade','gender'],
+      check: (record) => {
+        return record.score <= 20;
+      }
+    },
+    {
+      name: 'grade-gender-wise-20-scorer',
+      keyFields: ['grade','gender','score'],
+      dataFields: ['grade','gender','score'],
+      check: (record) => {
+        return record.score == 20;
+      }
+    },
+
+    {
       name: 'institute-wise-clean-name',
       keyFields: ['institute'],
-      dataFields: ['institute'],
+      dataFields: ['institute','district','state','prant','kshetra'],
         preprocess: (record) => {
           record.institute = cleanInstituteName(record.institute, record.city);
           return record;
