@@ -22,7 +22,7 @@ async function writeToCsvFile(data, filename, headers = []) {
         const transform = new Transform({
             objectMode: true,
             transform(chunk, encoding, callback) {
-                const values = headers.map(header => '"' + chunk[header] || '' +'"');
+                const values = headers.map(header => '"' + (chunk[header] || '') +'"');
                 this.push(`${values.join(',')}\n`);
                 callback();
             }
