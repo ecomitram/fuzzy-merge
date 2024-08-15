@@ -190,63 +190,63 @@ fs.readFile("input/nspc.csv", "utf8", (err, data) => {
   }
 
   const reports = [
-    // {
-    //   name: 'district-wise',
-    //   keyFields: ['district'],
-    //   dataFields: ['city'],
-    // },
-    // {
-    //   name: 'prant-wise',
-    //   keyFields: ['prant'],
-    //   dataFields: ['prant'],
-    // },
-    // {
-    //   name: 'kshetra-wise',
-    //   keyFields: ['kshetra'],
-    //   dataFields: ['kshetra'],
-    // },
-    // {
-    //   name: 'grade-wise',
-    //   keyFields: ['grade'],
-    //   dataFields: ['grade'],
-    // },
-    // {
-    //   name: 'prant-grade-wise',
-    //   keyFields: ['prant', 'grade'],
-    //   dataFields: ['prant', 'grade'],
-    // },
-    // {
-    //   name: 'grade-wise-20-scorer',
-    //   keyFields: [ 'grade'],
-    //   dataFields: [ 'grade'],
-    //   check: (record) => {
-    //     return record.score == 20;
-    //   }
-    // },
-    // {
-    //   name: 'institute-wise-clean-name',
-    //   keyFields: ['institute'],
-    //   dataFields: ['institute'],
-    //     preprocess: (record) => {
-    //       record.institute = cleanInstituteName(record.institute, record.city);
-    //       return record;
-    //   }
-    // },
     {
-      name: 'institute-wise-normalized-name',
-      keyFields: ['normalizeInstitute'],
-      dataFields: ['institute','normalizeInstitute','district'],
+      name: 'district-wise',
+      keyFields: ['district'],
+      dataFields: ['city'],
+    },
+    {
+      name: 'prant-wise',
+      keyFields: ['prant'],
+      dataFields: ['prant'],
+    },
+    {
+      name: 'kshetra-wise',
+      keyFields: ['kshetra'],
+      dataFields: ['kshetra'],
+    },
+    {
+      name: 'grade-wise',
+      keyFields: ['grade'],
+      dataFields: ['grade'],
+    },
+    {
+      name: 'prant-grade-wise',
+      keyFields: ['prant', 'grade'],
+      dataFields: ['prant', 'grade'],
+    },
+    {
+      name: 'grade-wise-20-scorer',
+      keyFields: [ 'grade'],
+      dataFields: [ 'grade'],
+      check: (record) => {
+        return record.score == 20;
+      }
+    },
+    {
+      name: 'institute-wise-clean-name',
+      keyFields: ['institute'],
+      dataFields: ['institute'],
         preprocess: (record) => {
-          record.normalizeInstitute = normalizeInstitute(record.institute, record.city);
+          record.institute = cleanInstituteName(record.institute, record.city);
           return record;
       }
     },
-    
     // {
-    //   name: 'institute-wise',
-    //   keyFields: ['institute'],
-    //   dataFields: ['institute', 'district', 'prant', 'kshetra'],
+    //   name: 'institute-wise-normalized-name',
+    //   keyFields: ['normalizeInstitute'],
+    //   dataFields: ['institute','normalizeInstitute','district'],
+    //     preprocess: (record) => {
+    //       record.normalizeInstitute = normalizeInstitute(record.institute, record.city);
+    //       return record;
+    //   }
     // },
+    
+    {
+      name: 'institute-wise',
+      keyFields: ['institute'],
+      dataFields: ['institute', 'district', 'prant', 'kshetra'],
+    },
 
   ];
 
