@@ -1,7 +1,7 @@
 const fs = require("fs");
 const csvParse = require("csv-parse");
 const FuzzySet = require("fuzzyset");
-let districtsMap = require('./mapper.json');
+let districtsMap = require('./mapper/mapper.json');
 const { exit } = require("process");
 const { count } = require("console");
 const { normalize } = require("path");

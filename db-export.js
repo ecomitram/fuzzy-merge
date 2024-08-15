@@ -17,12 +17,18 @@ console.log(`DB_NAME: ${DB_NAME}`);
 console.log(`OUTPUT_FILE: ${OUTPUT_FILE}`);
 
 
+
 async function writeToCsvFile(data, filename, headers = []) {
     await new Promise((resolve, reject) => {
         const transform = new Transform({
             objectMode: true,
             transform(chunk, encoding, callback) {
-                const values = headers.map(header => '"' + (chunk[header] || '') +'"');
+                const values = headers.map(function(header){
+                    let v = chunk[header] || '';
+                    v = v + '';
+                    v = v.replaceAll('"', ' ');
+                    return '"' + v + '"';
+                });
                 this.push(`${values.join(',')}\n`);
                 callback();
             }
