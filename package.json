@@ -10,6 +10,7 @@
     "author": "Shyam Verma",
     "dependencies": {
         "csv-parse": "^4.13.1",
-        "fuzzyset": "^0.8.0"
+        "fuzzyset": "1.0.7",
+        "mongodb": "^6.8.0"
     }
 }
