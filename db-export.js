@@ -56,19 +56,25 @@ async function fetchData() {
           '$lte': [
             {
               '$toDate': '$c_at'
-            }, new Date('Sat, 31 Aug 2024 00:00:00 GMT')
+            }, new Date('Sat, 22 Aug 2024 00:00:00 GMT')
           ]
         }
       }
     }, {
       '$project': {
+        'sName': '$participant.profile.name', 
+        'sEmail': '$participant.email', 
+        'sPhone': '$participant.profile.phone', 
+        'sAge': '$participant.profile.age',
+        'sLang': '$participant.quizPreferredLanguage', 
         'institutionName': '$participant.institutionName', 
         'gender': '$participant.profile.gender', 
         'class': '$participant.class', 
         'registrationType': '$participant.registrationType',
         'score': '$result.score', 
         'city': '$participant.location.city', 
-        'state': '$participant.location.state', 
+        'state': '$participant.location.state',
+        'planted_10_seeds': '$participant.planted_10_seeds',
       }
     }
   ];

@@ -13,6 +13,19 @@ districtsMap[''] = districtsMap['BLANK'] = {
   kshetra: 'BLANK'
 };
 
+const langMap = {
+  1: 'Asaamese',
+  2: 'Bangla',
+  3: 'English',
+  4: 'Gujarati',
+  5: 'Hindi',
+  6: 'Kannada',
+  7: 'Malayalam',
+  8: 'Marathi',
+  10: 'Tamil',
+  11: 'Telugu',
+};
+
 function cleanInstituteName(name, city) {
   name = name.trim();
 
@@ -147,7 +160,7 @@ function prepareStats(csvData, report) {
   let counter = 0;
   for (const row of csvData) {
     // institutionName,gender,class,registrationType,score,city,state
-    let [institute, gender, grade, registrationType, score,  city, state] = row;
+    let [sName, sEmail, sPhone, sAge, sLang, institute, gender, grade, registrationType, score,  city, state, planted_10_seeds] = row;
 
     //skip header
     if (state === 'state') {
@@ -164,6 +177,11 @@ function prepareStats(csvData, report) {
     score = parseInt(score.trim() || 0);
 
     const record = {
+      sName: sName,
+      sEmail: sEmail,
+      sPhone: sPhone,
+      sAge: sAge,
+      sLang: sLang,
       institute: institute,
       grade: grade,
       city: city,
@@ -171,8 +189,13 @@ function prepareStats(csvData, report) {
       gender:gender,
       score: score,
       district: district,
+      state: state,
+      planted_10_seeds: planted_10_seeds,
+      registrationType: registrationType,
       prant: prant,
-      kshetra: kshetra
+      kshetra: kshetra,
+
+
     }
 
     addToReport(report, record);
@@ -203,14 +226,51 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
       dataFields: ['city'],
     },
     {
+      name: 'district-wise-20-scorer',
+      keyFields: ['district'],
+      dataFields: ['district','city','score'],
+      check: (record) => {
+        return record.score == 20;
+      }
+    },
+    {
+      name: 'state-wise',
+      keyFields: ['state'],
+      dataFields: ['state'],
+    },
+    {
+      name: 'state-wise-20-scorer',
+      keyFields: ['state'],
+      dataFields: ['state','score'],
+      check: (record) => {
+        return record.score == 20;
+      }
+    },
+    {
       name: 'prant-wise',
       keyFields: ['prant'],
       dataFields: ['prant'],
     },
     {
+      name: 'prant-wise-20-scorer',
+      keyFields: ['prant'],
+      dataFields: ['prant','score'],
+      check: (record) => {
+        return record.score == 20;
+      }
+    },
+    {
       name: 'kshetra-wise',
       keyFields: ['kshetra'],
       dataFields: ['kshetra'],
+    },
+    {
+      name: 'kshetra-wise-20-scorer',
+      keyFields: ['kshetra'],
+      dataFields: ['kshetra','score'],
+      check: (record) => {
+        return record.score == 20;
+      }
     },
     {
       name: 'grade-wise',
@@ -224,7 +284,7 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     },
     {
       name: 'grade-wise-20-scorer',
-      keyFields: [ 'grade'],
+      keyFields: [ 'grade',],
       dataFields: [ 'grade'],
       check: (record) => {
         return record.score == 20;
@@ -283,6 +343,61 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
       name: 'institute-wise',
       keyFields: ['institute'],
       dataFields: ['institute', 'district', 'prant', 'kshetra'],
+    },
+    {
+      name: 'institute-wise-20-scorer',
+      keyFields: ['institute'],
+      dataFields: ['institute', 'district', 'prant', 'kshetra', 'score'],
+      check: (record) => {
+        return record.score == 20;
+      }
+    },
+    {
+      name: 'age-wise',
+      keyFields: ['sAge'],
+      dataFields: ['sAge'],
+    },
+    {
+      name: 'language-wise',
+      keyFields: ['sLang'],
+      dataFields: ['sLang', 'sLangName'],
+      preprocess: (record) => {
+        record.sLangName = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
+    },
+    {
+      name: 'language-wise-20-scorer',
+      keyFields: ['sLang'],
+      dataFields: ['sLang', 'sLangName','score'],
+      preprocess: (record) => {
+        record.sLangName = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
+      check: (record) => {
+        return record.score == 20;
+      }
+    },
+    {
+      name: 'planted_10_seeds-wise',
+      keyFields: ['planted_10_seeds'],
+      dataFields: ['planted_10_seeds'],
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+        return record;
+      },
+    },
+    {
+      name: 'planted_10_seeds-wise-20-scorer',
+      keyFields: ['planted_10_seeds'],
+      dataFields: ['planted_10_seeds','score'],
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+        return record;
+      },
+      check: (record) => {
+        return record.score == 20;
+      }
     },
 
   ];

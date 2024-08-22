@@ -18,7 +18,7 @@ OUTPUT_DIR="./input/assessments.csv" # Output directory for the dump
 
 #close open port
 echo "Closing port ${LOCAL_DB_PORT}"
-lsof -i :${LOCAL_DB_PORT} | grep LISTEN | awk '{print $2}' | xargs kill
+#lsof -i :${LOCAL_DB_PORT} | grep LISTEN | awk '{print $2}' | xargs kill
 
 # Establish SSH tunnel
 echo "Establishing SSH tunnel..."
