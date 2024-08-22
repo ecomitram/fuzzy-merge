@@ -96,6 +96,58 @@ function cleanDistrictName(name) {
 }
 
 
+const studentListData = {};
+
+function addToStudentList(list, record) {
+  // check if record should be included in list
+  if (list.check && !list.check(record)) {
+    return;
+  }
+
+  // preprocess record
+  if (list.preprocess) {
+    record = list.preprocess(record);
+  }
+
+  let data = list.keyFields.map(keyField => record[keyField]);
+  let key = data.join(',');
+
+  if (studentListData[list.name] === undefined) {
+    studentListData[list.name] = {};
+  }
+
+  const dataStore = studentListData[list.name];
+
+  if (dataStore[key] === undefined) {
+    dataStore[key] = [];
+  }
+
+  dataStore[key].push(record);
+}
+
+function saveStudentLists(list) {
+  const dataStore = studentListData[list.name];
+
+  const targetFolder = `output/student-lists/${list.name}/`;
+  // Delete the folder if it already exists
+  if (fs.existsSync(targetFolder)) {
+    fs.rmSync(targetFolder, { recursive:true, force: true });
+  }
+
+  fs.mkdirSync(targetFolder, { recursive: true });
+
+  for (const [key, records] of Object.entries(dataStore)) {
+    const fileName = `${targetFolder}list-${key.replace(/[^a-z0-9]/gi, '_')}.csv`;
+    
+    
+    const header = list.dataFields.join(',') + '\n';
+    const rows = records.map(record => 
+      list.dataFields.map(field => `"${record[field]}"`).join(',')
+    ).join('\n');
+
+    fs.writeFileSync(fileName, header + rows);
+  }
+}
 
 const reportData = {
 };
@@ -142,8 +194,14 @@ function addToReport(report, record) {
 function saveReport(report) {
   const dataStore = reportData[report.name];
 
+  const targetFolder = `output/reports/`;
+  // Delete the folder if it already exists
+  if (!fs.existsSync(targetFolder)) {
+    fs.mkdirSync(targetFolder, { recursive: true });
+  }
+  
   fs.writeFileSync(
-    `output/report-${report.name}.csv`,
+    `${targetFolder}${report.name}.csv`,
     report.dataFields.join(',') + ',count\n' +
     Object.values(dataStore)
       .map(function (record) {
@@ -155,7 +213,7 @@ function saveReport(report) {
   );
 }
 
-function prepareStats(csvData, report) {
+function prepareStats(csvData, report, addTo, saveTo) {
 
   let counter = 0;
   for (const row of csvData) {
@@ -198,7 +256,7 @@ function prepareStats(csvData, report) {
 
     }
 
-    addToReport(report, record);
+    addTo(report, record);
     counter++;
     // if (counter % 1000 === 0) {
     //   console.log('Processed records: ', counter);
@@ -207,7 +265,7 @@ function prepareStats(csvData, report) {
 
   console.log('Total records: ', counter);
   // write to file
-  saveReport(report);
+  saveTo(report);
 
 }
 
@@ -402,11 +460,79 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
 
   ];
 
+  const lists = [
+    {
+    name: 'prant-wise-20-scorer',
+    keyFields: ['prant'],
+    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
+    check: (record) => {
+      return record.score == 20;
+    },
+    preprocess: (record) => {
+      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+      return record;
+    },
+  },
+  {
+    name: 'state-wise-20-scorer',
+    keyFields: ['state'],
+    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
+    check: (record) => {
+      return record.score == 20;
+    },
+    preprocess: (record) => {
+      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+      return record;
+    },
+  },
+  {
+    name: 'district-wise-20-scorer',
+    keyFields: ['district'],
+    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
+    check: (record) => {
+      return record.score == 20;
+    },
+    preprocess: (record) => {
+      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+      record.district = record.district || 'BLANK';
+      return record;
+    },
+  },
+  {
+    name: 'prant-wise',
+    keyFields: ['prant'],
+    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
+    preprocess: (record) => {
+      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+      return record;
+    },
+  },
+  {
+    name: 'state-wise',
+    keyFields: ['state'],
+    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
+    preprocess: (record) => {
+      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+      return record;
+    },
+  },
+  {
+    name: 'district-wise',
+    keyFields: ['district'],
+    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
+    preprocess: (record) => {
+      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+      return record;
+    },
+  }
+];
 
-
-  // from data only pick first 100 lines
-  // data = data.split('\n').slice(0,100).join('\n');
-  // console.log('data: ', data);
 
   // Parse the CSV data
   csvParse(data, { delimiter: "," }, (err, csvData) => {
@@ -418,8 +544,15 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     for (const report of reports) {
       console.log('Processing report: ', report.name);
       console.time(report.name);
-      prepareStats(csvData, report);
+      prepareStats(csvData, report, addToReport, saveReport);
       console.timeEnd(report.name);
+    }
+
+    for (const list of lists) {
+      console.log('Processing student list: ', list.name);
+      console.time(list.name);
+      prepareStats(csvData, list, addToStudentList, saveStudentLists);
+      console.timeEnd(list.name);
     }
 
     console.timeEnd("TotalTime");
