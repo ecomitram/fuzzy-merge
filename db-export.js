@@ -2,6 +2,7 @@ const { MongoClient } = require("mongodb");
 const fs = require('fs');
 const { Transform } = require('stream');
 const { exit } = require("process");
+  // write to file
 
 //read arguments from command line ${LOCAL_DB_HOST} ${LOCAL_DB_PORT} ${DB_NAME} ${OUTPUT_FILE}
 const args = process.argv.slice(2);
@@ -16,10 +17,8 @@ console.log(`LOCAL_DB_PORT: ${LOCAL_DB_PORT}`);
 console.log(`DB_NAME: ${DB_NAME}`);
 console.log(`OUTPUT_FILE: ${OUTPUT_FILE}`);
 
-
-
-async function writeToCsvFile(data, filename, headers = []) {
-    await new Promise((resolve, reject) => {
+async function writeCursorToCsvFile(cursor, filename, headers = []) {
+    return new Promise((resolve, reject) => {
         const transform = new Transform({
             objectMode: true,
             transform(chunk, encoding, callback) {
@@ -33,18 +32,21 @@ async function writeToCsvFile(data, filename, headers = []) {
                 callback();
             }
         });
+
         const writeStream = fs.createWriteStream(filename);
         writeStream.on('finish', resolve);
         writeStream.on('error', reject);
+
         if (headers.length > 0) {
             writeStream.write(`${headers.join(',')}\n`);
         }
-        data.forEach(item => transform.write(item));
-        transform.end();
-        transform.pipe(writeStream);
+
+        cursor.stream()
+            .pipe(transform)
+            .pipe(writeStream)
+            .on('error', reject);
     });
 }
-
 
 async function fetchData() {
   const agg = [
@@ -90,16 +92,16 @@ async function fetchData() {
   console.log("Running query");
   const cursor = coll.aggregate(agg);
 
-  console.log("Fetching data");
-  const result = await cursor.toArray();
+  // console.log("Fetching data");
+  // const result = await cursor.toArray();
   
-  // write to file
-  const fs = require('fs');
+
+
   console.log("Writing data to file");
   //write as CSV
 
     try {
-        await writeToCsvFile(result, OUTPUT_FILE, keys);
+        await writeCursorToCsvFile(cursor, OUTPUT_FILE, keys);
         console.log('The CSV file was written successfully.');
     } catch (e) {
         console.error('An error occurred while writing the CSV file.', e);
