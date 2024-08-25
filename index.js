@@ -205,10 +205,15 @@ function saveReport(report) {
     report.dataFields.join(',') + ',count\n' +
     Object.values(dataStore)
       .map(function (record) {
+        // Check if the record should be skipped based on some attributes
+        if (report.postCheck && !report.postCheck(record)) {
+          return null; // Returning null for records to be skipped
+        }
         let data = report.dataFields.map(dataField => record[dataField]);
         let ret = `${data.join(',')},${record.count}`;
         return ret;
       })
+      .filter(item => item !== null) // Remove null entries (skipped records)
       .join("\n")
   );
 }
@@ -385,17 +390,43 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
         preprocess: (record) => {
           record.institute = cleanInstituteName(record.institute, record.city);
           return record;
+      },
+      postCheck: (record) => {
+        //if normalizeInstitute is BLANK, or INVALID, return NULL
+        if (record.normalizeInstitute === 'BLANK' || record.normalizeInstitute === 'Invalid') {
+          return false;
+        }
+
+        //if count is less than 10, return NULL
+        if (record.count < 10) {
+          return false;
+        }
+
+        return true;
       }
     },
-    // {
-    //   name: 'institute-wise-normalized-name',
-    //   keyFields: ['normalizeInstitute'],
-    //   dataFields: ['institute','normalizeInstitute','district'],
-    //     preprocess: (record) => {
-    //       record.normalizeInstitute = normalizeInstitute(record.institute, record.city);
-    //       return record;
-    //   }
-    // },
+    {
+      name: 'institute-wise-normalized-name',
+      keyFields: ['normalizeInstitute'],
+      dataFields: ['institute','normalizeInstitute','district','state','prant','kshetra'],
+        preprocess: (record) => {
+          record.normalizeInstitute = normalizeInstitute(record.institute, record.city);
+          return record;
+      },
+      postCheck: (record) => {
+        //if normalizeInstitute is BLANK, or INVALID, return NULL
+        if (record.normalizeInstitute === 'BLANK' || record.normalizeInstitute === 'Invalid') {
+          return false;
+        }
+
+        //if count is less than 10, return NULL
+        if (record.count < 10) {
+          return false;
+        }
+
+        return true;
+      }
+    },
     
     {
       name: 'institute-wise',

@@ -19,6 +19,9 @@ console.log(`OUTPUT_FILE: ${OUTPUT_FILE}`);
 
 async function writeCursorToCsvFile(cursor, filename, headers = []) {
     return new Promise((resolve, reject) => {
+        console.log(`Starting to write data to ${filename}`);
+        let rowCount = 0;
+
         const transform = new Transform({
             objectMode: true,
             transform(chunk, encoding, callback) {
@@ -29,22 +32,34 @@ async function writeCursorToCsvFile(cursor, filename, headers = []) {
                     return '"' + v + '"';
                 });
                 this.push(`${values.join(',')}\n`);
+                rowCount++;
+                if (rowCount % 1000 === 0) {
+                    console.log(`Processed ${rowCount} rows`);
+                }
                 callback();
             }
         });
 
         const writeStream = fs.createWriteStream(filename);
-        writeStream.on('finish', resolve);
+        writeStream.on('finish', () => {
+            console.log(`Finished writing ${rowCount} rows to ${filename}`);
+            resolve();
+        });
         writeStream.on('error', reject);
 
         if (headers.length > 0) {
+            console.log(`Writing headers: ${headers.join(', ')}`);
             writeStream.write(`${headers.join(',')}\n`);
         }
 
+        console.log('Starting to stream data');
         cursor.stream()
             .pipe(transform)
             .pipe(writeStream)
-            .on('error', reject);
+            .on('error', (error) => {
+                console.error('Error occurred while writing:', error);
+                reject(error);
+            });
     });
 }
 
@@ -58,7 +73,7 @@ async function fetchData() {
           '$lte': [
             {
               '$toDate': '$c_at'
-            }, new Date('Sat, 22 Aug 2024 00:00:00 GMT')
+            }, new Date('Sat, 25 Aug 2024 00:00:00 GMT')
           ]
         }
       }
