@@ -1,16 +1,16 @@
-const fs = require("fs");
-const csvParse = require("csv-parse");
-const FuzzySet = require("fuzzyset");
+const fs = require('fs');
+const csvParse = require('csv-parse');
+const FuzzySet = require('fuzzyset');
 let districtsMap = require('./mapper/mapper.json');
-const { exit } = require("process");
-const { count } = require("console");
-const { normalize } = require("path");
+const { exit } = require('process');
+const { count } = require('console');
+const { normalize } = require('path');
 
 districtsMap[''] = districtsMap['BLANK'] = {
   district: 'BLANK',
   state: 'BLANK',
   prant: 'BLANK',
-  kshetra: 'BLANK'
+  kshetra: 'BLANK',
 };
 
 const langMap = {
@@ -32,19 +32,19 @@ function cleanInstituteName(name, city) {
   //lowercase
   name = name.toLowerCase();
 
-  name = name.replaceAll('-', ' ')
-  name = name.replaceAll('.', ' ')
-  name = name.replaceAll('"', '')
-  name = name.replaceAll(',', '')
+  name = name.replaceAll('-', ' ');
+  name = name.replaceAll('.', ' ');
+  name = name.replaceAll('"', '');
+  name = name.replaceAll(',', '');
 
   //remove city names
-  name = name.replaceAll(city.toLowerCase(), "");
+  name = name.replaceAll(city.toLowerCase(), '');
 
   //remove school word
-  name = name.replaceAll('school', "");
+  name = name.replaceAll('school', '');
 
   //remove non alpha-numeric, with space
-  name = name.replace("/[^a-z0-9 ]/g", " ");
+  name = name.replace('/[^a-z0-9 ]/g', ' ');
 
   //if all numbers, remove
   if (/^\d+$/.test(name)) {
@@ -73,7 +73,7 @@ function normalizeInstitute(institute, city) {
   matches = fuzzyMap.get(name, null, 0.85);
   if (matches) {
     return matches[0][1];
-  }else{
+  } else {
     fuzzyMap.add(name);
     return name;
   }
@@ -86,7 +86,7 @@ function cleanDistrictName(name) {
   name = name.toLowerCase();
 
   //remove non alpha-numeric, with space
-  name = name.replace("/[^a-z0-9 ]/g", " ");
+  name = name.replace('/[^a-z0-9 ]/g', ' ');
 
   // replace multi space, with single space
   name = name.replace(/\s\s+/g, ' ');
@@ -94,7 +94,6 @@ function cleanDistrictName(name) {
   name = name.trim();
   return name;
 }
-
 
 const studentListData = {};
 
@@ -109,7 +108,7 @@ function addToStudentList(list, record) {
     record = list.preprocess(record);
   }
 
-  let data = list.keyFields.map(keyField => record[keyField]);
+  let data = list.keyFields.map((keyField) => record[keyField]);
   let key = data.join(',');
 
   if (studentListData[list.name] === undefined) {
@@ -131,26 +130,29 @@ function saveStudentLists(list) {
   const targetFolder = `output/student-lists/${list.name}/`;
   // Delete the folder if it already exists
   if (fs.existsSync(targetFolder)) {
-    fs.rmSync(targetFolder, { recursive:true, force: true });
+    fs.rmSync(targetFolder, { recursive: true, force: true });
   }
 
   fs.mkdirSync(targetFolder, { recursive: true });
 
   for (const [key, records] of Object.entries(dataStore)) {
-    const fileName = `${targetFolder}list-${key.replace(/[^a-z0-9]/gi, '_')}.csv`;
-    
-    
+    const fileName = `${targetFolder}list-${key.replace(
+      /[^a-z0-9]/gi,
+      '_'
+    )}.csv`;
+
     const header = list.dataFields.join(',') + '\n';
-    const rows = records.map(record => 
-      list.dataFields.map(field => `"${record[field]}"`).join(',')
-    ).join('\n');
+    const rows = records
+      .map((record) =>
+        list.dataFields.map((field) => `"${record[field]}"`).join(',')
+      )
+      .join('\n');
 
     fs.writeFileSync(fileName, header + rows);
   }
 }
 
-const reportData = {
-};
+const reportData = {};
 
 function addToReport(report, record) {
   // check if record should be included in report
@@ -159,11 +161,11 @@ function addToReport(report, record) {
   }
 
   // preprocess record
-  if(report.preprocess){
+  if (report.preprocess) {
     record = report.preprocess(record);
   }
 
-  let data = report.keyFields.map(keyField => record[keyField]);
+  let data = report.keyFields.map((keyField) => record[keyField]);
   let key = data.join(',');
 
   const incrementBy = 1;
@@ -186,7 +188,7 @@ function addToReport(report, record) {
 
   dataStore[key]['count'] += incrementBy;
 
-  report.dataFields.forEach(dataField => {
+  report.dataFields.forEach((dataField) => {
     dataStore[key][dataField] = `"${record[dataField]}"`;
   });
 }
@@ -199,31 +201,45 @@ function saveReport(report) {
   if (!fs.existsSync(targetFolder)) {
     fs.mkdirSync(targetFolder, { recursive: true });
   }
-  
+
   fs.writeFileSync(
     `${targetFolder}${report.name}.csv`,
-    report.dataFields.join(',') + ',count\n' +
-    Object.values(dataStore)
-      .map(function (record) {
-        // Check if the record should be skipped based on some attributes
-        if (report.postCheck && !report.postCheck(record)) {
-          return null; // Returning null for records to be skipped
-        }
-        let data = report.dataFields.map(dataField => record[dataField]);
-        let ret = `${data.join(',')},${record.count}`;
-        return ret;
-      })
-      .filter(item => item !== null) // Remove null entries (skipped records)
-      .join("\n")
+    report.dataFields.join(',') +
+      ',count\n' +
+      Object.values(dataStore)
+        .map(function (record) {
+          // Check if the record should be skipped based on some attributes
+          if (report.postCheck && !report.postCheck(record)) {
+            return null; // Returning null for records to be skipped
+          }
+          let data = report.dataFields.map((dataField) => record[dataField]);
+          let ret = `${data.join(',')},${record.count}`;
+          return ret;
+        })
+        .filter((item) => item !== null) // Remove null entries (skipped records)
+        .join('\n')
   );
 }
 
 function prepareStats(csvData, report, addTo, saveTo) {
-
   let counter = 0;
   for (const row of csvData) {
     // institutionName,gender,class,registrationType,score,city,state
-    let [sName, sEmail, sPhone, sAge, sLang, institute, gender, grade, registrationType, score,  city, state, planted_10_seeds] = row;
+    let [
+      sName,
+      sEmail,
+      sPhone,
+      sAge,
+      sLang,
+      institute,
+      gender,
+      grade,
+      registrationType,
+      score,
+      city,
+      state,
+      planted_10_seeds,
+    ] = row;
 
     //skip header
     if (state === 'state') {
@@ -249,7 +265,7 @@ function prepareStats(csvData, report, addTo, saveTo) {
       grade: grade,
       city: city,
       state: state,
-      gender:gender,
+      gender: gender,
       score: score,
       district: district,
       state: state,
@@ -257,9 +273,7 @@ function prepareStats(csvData, report, addTo, saveTo) {
       registrationType: registrationType,
       prant: prant,
       kshetra: kshetra,
-
-
-    }
+    };
 
     addTo(report, record);
     counter++;
@@ -271,12 +285,11 @@ function prepareStats(csvData, report, addTo, saveTo) {
   console.log('Total records: ', counter);
   // write to file
   saveTo(report);
-
 }
 
 // Read the CSV file
-console.time("TotalTime");
-fs.readFile("input/assessments.csv", "utf8", (err, data) => {
+console.time('TotalTime');
+fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
   if (err) {
     console.error(err);
     return;
@@ -291,10 +304,10 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     {
       name: 'district-wise-20-scorer',
       keyFields: ['district'],
-      dataFields: ['district','city','score'],
+      dataFields: ['district', 'city', 'score'],
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
     {
       name: 'state-wise',
@@ -304,10 +317,10 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     {
       name: 'state-wise-20-scorer',
       keyFields: ['state'],
-      dataFields: ['state','score'],
+      dataFields: ['state', 'score'],
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
     {
       name: 'prant-wise',
@@ -317,10 +330,10 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     {
       name: 'prant-wise-20-scorer',
       keyFields: ['prant'],
-      dataFields: ['prant','score'],
+      dataFields: ['prant', 'score'],
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
     {
       name: 'kshetra-wise',
@@ -330,10 +343,10 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     {
       name: 'kshetra-wise-20-scorer',
       keyFields: ['kshetra'],
-      dataFields: ['kshetra','score'],
+      dataFields: ['kshetra', 'score'],
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
     {
       name: 'grade-wise',
@@ -347,87 +360,73 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     },
     {
       name: 'grade-wise-20-scorer',
-      keyFields: [ 'grade',],
-      dataFields: [ 'grade'],
+      keyFields: ['grade'],
+      dataFields: ['grade'],
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
     {
       name: 'gender-wise',
-      keyFields: [ 'gender'],
-      dataFields: [ 'gender'],
+      keyFields: ['gender'],
+      dataFields: ['gender'],
     },
     {
       name: 'score-wise',
-      keyFields: [ 'score'],
-      dataFields: [ 'score'],
+      keyFields: ['score'],
+      dataFields: ['score'],
       check: (record) => {
         return record.score <= 20;
-      }
+      },
     },
     {
       name: 'grade-gender-wise',
-      keyFields: ['grade','gender'],
-      dataFields: ['grade','gender'],
+      keyFields: ['grade', 'gender'],
+      dataFields: ['grade', 'gender'],
       check: (record) => {
         return record.score <= 20;
-      }
+      },
     },
     {
       name: 'grade-gender-wise-20-scorer',
-      keyFields: ['grade','gender','score'],
-      dataFields: ['grade','gender','score'],
+      keyFields: ['grade', 'gender', 'score'],
+      dataFields: ['grade', 'gender', 'score'],
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
 
     {
       name: 'institute-wise-clean-name',
       keyFields: ['institute'],
-      dataFields: ['institute','district','state','prant','kshetra'],
-        preprocess: (record) => {
-          record.institute = cleanInstituteName(record.institute, record.city);
-          return record;
+      dataFields: ['institute', 'district', 'state', 'prant', 'kshetra'],
+      preprocess: (record) => {
+        record.institute = cleanInstituteName(record.institute, record.city);
+        return record;
       },
-      postCheck: (record) => {
-        //if normalizeInstitute is BLANK, or INVALID, return NULL
-        if (record.normalizeInstitute === 'BLANK' || record.normalizeInstitute === 'Invalid') {
-          return false;
-        }
-
-        //if count is less than 10, return NULL
-        if (record.count < 10) {
-          return false;
-        }
-
-        return true;
-      }
+      postCheck: (record) => record.count > 1,
     },
-    {
-      name: 'institute-wise-normalized-name',
-      keyFields: ['normalizeInstitute'],
-      dataFields: ['institute','normalizeInstitute','district','state','prant','kshetra'],
-        preprocess: (record) => {
-          record.normalizeInstitute = normalizeInstitute(record.institute, record.city);
-          return record;
-      },
-      postCheck: (record) => {
-        //if normalizeInstitute is BLANK, or INVALID, return NULL
-        if (record.normalizeInstitute === 'BLANK' || record.normalizeInstitute === 'Invalid') {
-          return false;
-        }
+    // {
+    //   name: 'institute-wise-normalized-name-at-least-10-registrations',
+    //   keyFields: ['normalizeInstitute'],
+    //   dataFields: [
+    //     'institute',
+    //     'normalizeInstitute',
+    //     'district',
+    //     'state',
+    //     'prant',
+    //     'kshetra',
+    //   ],
+    //   preprocess: (record) => {
+    //     record.normalizeInstitute = normalizeInstitute(
+    //       record.institute,
+    //       record.city
+    //     );
+    //     return record;
+    //   },
+    //   postCheck: (record) => record.count > 9,
+    // },
 
-        //if count is less than 10, return NULL
-        if (record.count < 10) {
-          return false;
-        }
-
-        return true;
-      }
-    },
-    
     {
       name: 'institute-wise',
       keyFields: ['institute'],
@@ -439,7 +438,11 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
       dataFields: ['institute', 'district', 'prant', 'kshetra', 'score'],
       check: (record) => {
         return record.score == 20;
-      }
+      },
+      preprocess: (record) => {
+        record.institute = cleanInstituteName(record.institute, record.city);
+        return record;
+      },
     },
     {
       name: 'age-wise',
@@ -458,115 +461,224 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
     {
       name: 'language-wise-20-scorer',
       keyFields: ['sLang'],
-      dataFields: ['sLang', 'sLangName','score'],
+      dataFields: ['sLang', 'sLangName', 'score'],
       preprocess: (record) => {
         record.sLangName = langMap[record.sLang] || `Unknown: ${record.sLang}`;
         return record;
       },
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
     {
       name: 'planted_10_seeds-wise',
       keyFields: ['planted_10_seeds'],
       dataFields: ['planted_10_seeds'],
       preprocess: (record) => {
-        record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
         return record;
       },
     },
     {
       name: 'planted_10_seeds-wise-20-scorer',
       keyFields: ['planted_10_seeds'],
-      dataFields: ['planted_10_seeds','score'],
+      dataFields: ['planted_10_seeds', 'score'],
       preprocess: (record) => {
-        record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
         return record;
       },
       check: (record) => {
         return record.score == 20;
-      }
+      },
     },
-
   ];
 
   const lists = [
     {
-    name: 'prant-wise-20-scorer',
-    keyFields: ['prant'],
-    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
-    check: (record) => {
-      return record.score == 20;
+      name: 'prant-wise-20-scorer',
+      keyFields: ['prant'],
+      dataFields: [
+        'sName',
+        'sPhone',
+        'sLang',
+        'institute',
+        'grade',
+        'city',
+        'state',
+        'gender',
+        'score',
+        'district',
+        'planted_10_seeds',
+        'registrationType',
+        'prant',
+        'kshetra',
+      ],
+      check: (record) => {
+        return record.score == 20;
+      },
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
+        record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
     },
-    preprocess: (record) => {
-      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
-      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
-      return record;
+    {
+      name: 'state-wise-20-scorer',
+      keyFields: ['state'],
+      dataFields: [
+        'sName',
+        'sPhone',
+        'sLang',
+        'institute',
+        'grade',
+        'city',
+        'state',
+        'gender',
+        'score',
+        'district',
+        'planted_10_seeds',
+        'registrationType',
+        'prant',
+        'kshetra',
+      ],
+      check: (record) => {
+        return record.score == 20;
+      },
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
+        record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
     },
-  },
-  {
-    name: 'state-wise-20-scorer',
-    keyFields: ['state'],
-    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
-    check: (record) => {
-      return record.score == 20;
+    {
+      name: 'district-wise-20-scorer',
+      keyFields: ['district'],
+      dataFields: [
+        'sName',
+        'sPhone',
+        'sLang',
+        'institute',
+        'grade',
+        'city',
+        'state',
+        'gender',
+        'score',
+        'district',
+        'planted_10_seeds',
+        'registrationType',
+        'prant',
+        'kshetra',
+      ],
+      check: (record) => {
+        return record.score == 20;
+      },
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
+        record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        record.district = record.district || 'BLANK';
+        return record;
+      },
     },
-    preprocess: (record) => {
-      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
-      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
-      return record;
+    {
+      name: 'prant-wise',
+      keyFields: ['prant'],
+      dataFields: [
+        'sName',
+        'sPhone',
+        'sLang',
+        'institute',
+        'grade',
+        'city',
+        'state',
+        'gender',
+        'score',
+        'district',
+        'planted_10_seeds',
+        'registrationType',
+        'prant',
+        'kshetra',
+      ],
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
+        record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
     },
-  },
-  {
-    name: 'district-wise-20-scorer',
-    keyFields: ['district'],
-    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
-    check: (record) => {
-      return record.score == 20;
+    {
+      name: 'state-wise',
+      keyFields: ['state'],
+      dataFields: [
+        'sName',
+        'sPhone',
+        'sLang',
+        'institute',
+        'grade',
+        'city',
+        'state',
+        'gender',
+        'score',
+        'district',
+        'planted_10_seeds',
+        'registrationType',
+        'prant',
+        'kshetra',
+      ],
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
+        record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
     },
-    preprocess: (record) => {
-      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
-      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
-      record.district = record.district || 'BLANK';
-      return record;
+    {
+      name: 'district-wise',
+      keyFields: ['district'],
+      dataFields: [
+        'sName',
+        'sPhone',
+        'sLang',
+        'institute',
+        'grade',
+        'city',
+        'state',
+        'gender',
+        'score',
+        'district',
+        'planted_10_seeds',
+        'registrationType',
+        'prant',
+        'kshetra',
+      ],
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
+        record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
     },
-  },
-  {
-    name: 'prant-wise',
-    keyFields: ['prant'],
-    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
-    preprocess: (record) => {
-      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
-      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
-      return record;
+    {
+      name: '20-scorer-student-list',
+      keyFields: ['score'],
+      dataFields: [
+        'sName',
+        'sLang',
+        'institute',
+        'grade',
+        'city',
+        'state',
+        'district',
+      ],
+      check: (record) => {
+        return record.score == 20;
+      },
+      preprocess: (record) => {
+        record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
+        record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
+        return record;
+      },
     },
-  },
-  {
-    name: 'state-wise',
-    keyFields: ['state'],
-    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
-    preprocess: (record) => {
-      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
-      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
-      return record;
-    },
-  },
-  {
-    name: 'district-wise',
-    keyFields: ['district'],
-    dataFields: ['sName', 'sPhone', 'sLang', 'institute', 'grade', 'city', 'state', 'gender', 'score', 'district', 'planted_10_seeds', 'registrationType', 'prant','kshetra'],
-    preprocess: (record) => {
-      record.planted_10_seeds = record.planted_10_seeds ? 'Yes': 'No';
-      record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
-      return record;
-    },
-  }
-];
-
+  ];
 
   // Parse the CSV data
-  csvParse(data, { delimiter: "," }, (err, csvData) => {
+  csvParse(data, { delimiter: ',' }, (err, csvData) => {
     if (err) {
       console.error(err);
       return;
@@ -586,10 +698,9 @@ fs.readFile("input/assessments.csv", "utf8", (err, data) => {
       console.timeEnd(list.name);
     }
 
-    console.timeEnd("TotalTime");
+    console.timeEnd('TotalTime');
   });
 });
-
 
 /*
 
