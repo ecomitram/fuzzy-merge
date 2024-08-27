@@ -404,7 +404,7 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     {
       name: 'district-wise-20-scorer',
       keyFields: ['district'],
-      dataFields: ['district', 'city', 'score'],
+      dataFields: ['district', 'city', 'state', 'score'],
       check: (record) => {
         return record.score == 20;
       },
