@@ -82,6 +82,7 @@ async function fetchData() {
     },
     {
       $project: {
+        _id: '$_id',
         sName: '$participant.profile.name',
         sEmail: '$participant.email',
         sPhone: '$participant.profile.phone',

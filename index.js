@@ -26,39 +26,50 @@ const langMap = {
   11: 'Telugu',
 };
 
-function cleanInstituteName(name, city) {
+function cleanString(name) {
   name = name.trim();
-
-  //lowercase
   name = name.toLowerCase();
 
-  name = name.replaceAll('-', ' ');
-  name = name.replaceAll('.', ' ');
-  name = name.replaceAll('"', '');
-  name = name.replaceAll(',', '');
+  //remove special characters, consider multiple languages
+  name = name.replace(/[^\p{L}\p{N}\s]/gu, ' ');
+  // Explanation:
+  // \p{L} - Matches any kind of letter from any language
+  // \p{N} - Matches any numeric digit from any script
+  // \s - Matches any whitespace character
+  // ^ inside [] - Negates the set, meaning "match anything that is not these"
+  // /g - Global flag, replace all occurrences
+  // /u - Unicode flag, for proper Unicode processing
 
-  //remove city names
-  name = name.replaceAll(city.toLowerCase(), '');
+  // we cannot do it as it will remove all the words (solapur univeristy, raipur college)
+  // let replaceWords = [
+  //   ['school', ''],
+  //   ['institute', ''],
+  //   ['college', ''],
+  //   ['university', ''],
+  //   ['institution', ''],
+  // ];
+  // replaceWords.forEach(([from, to]) => {
+  //   name = name.replaceAll(from, to);
+  // });
 
-  //remove school word
-  name = name.replaceAll('school', '');
+  //remove multi space with single space
+  name = name.replace(/\s\s+/g, ' ');
+  name = name.trim();
 
-  //remove non alpha-numeric, with space
-  name = name.replace('/[^a-z0-9 ]/g', ' ');
-
-  //if all numbers, remove
+  //if all digits, then return blank
   if (/^\d+$/.test(name)) {
-    return 'Invalid';
+    return 'Invalid Name';
   }
 
-  name = name.trim();
   return name;
 }
 
+function cleanInstituteName(name, city) {
+  return cleanString(name);
+}
+
 const cityFuzzyMap = {};
-function getFuzzyMap(city) {
-  //use seperate fuzzyset for every city
-  let fuzzyMapKey = `${city}`;
+function getFuzzyMap(fuzzyMapKey) {
   if (cityFuzzyMap[fuzzyMapKey] === undefined) {
     cityFuzzyMap[fuzzyMapKey] = FuzzySet();
   }
@@ -66,11 +77,19 @@ function getFuzzyMap(city) {
   return cityFuzzyMap[fuzzyMapKey];
 }
 
-function normalizeInstitute(institute, city) {
-  let name = cleanInstituteName(institute, city);
+function normalizeInstitute(institute, city, district, state) {
+  if (state == 'NRI') {
+    return 'NRI';
+  }
 
-  const fuzzyMap = getFuzzyMap(city);
-  matches = fuzzyMap.get(name, null, 0.85);
+  if (state == '') {
+    return null;
+  }
+
+  let name = cleanInstituteName(institute, city);
+  let key = district + state;
+  const fuzzyMap = getFuzzyMap(key);
+  matches = fuzzyMap.get(name, null, 0.9);
   if (matches) {
     return matches[0][1];
   } else {
@@ -80,8 +99,6 @@ function normalizeInstitute(institute, city) {
 }
 
 function cleanDistrictName(name) {
-  name = name.trim();
-
   //lowercase
   name = name.toLowerCase();
 
@@ -103,9 +120,24 @@ function addToStudentList(list, record) {
     return;
   }
 
+  //  if state is blank
+  if (record.state == '') {
+    record.state = 'Not Provided';
+    record.district = 'Not Provided';
+    record.prant = 'Not Provided';
+    record.kshetra = 'Not Provided';
+  }
+
+  if (record.state == 'NRI') {
+    record.state = 'NRI';
+    record.district = 'NRI';
+    record.prant = 'NRI';
+    record.kshetra = 'NRI';
+  }
+
   // preprocess record
   if (list.preprocess) {
-    record = list.preprocess(record);
+    record = list.preprocess(record, list);
   }
 
   let data = list.keyFields.map((keyField) => record[keyField]);
@@ -160,13 +192,33 @@ function addToReport(report, record) {
     return;
   }
 
+  //  if state is blank
+  if (record.state == '') {
+    record.state = 'Not Provided';
+    record.district = 'Not Provided';
+    record.prant = 'Not Provided';
+    record.kshetra = 'Not Provided';
+  }
+
+  if (record.state == 'NRI') {
+    record.state = 'NRI';
+    record.district = 'NRI';
+    record.prant = 'NRI';
+    record.kshetra = 'NRI';
+  }
+
   // preprocess record
   if (report.preprocess) {
-    record = report.preprocess(record);
+    record = report.preprocess(record, report);
   }
 
   let data = report.keyFields.map((keyField) => record[keyField]);
-  let key = data.join(',');
+  let key = data.join('');
+
+  // skip if key is blank
+  if (key == '') {
+    return;
+  }
 
   const incrementBy = 1;
 
@@ -191,6 +243,13 @@ function addToReport(report, record) {
   report.dataFields.forEach((dataField) => {
     dataStore[key][dataField] = `"${record[dataField]}"`;
   });
+
+  report.counter = report.counter || 0;
+  report.counter++;
+  // show progress for every 10000 records
+  if (report.counter % 10000 === 0) {
+    console.log('Processed records: ', report.counter);
+  }
 }
 
 function saveReport(report) {
@@ -226,6 +285,7 @@ function prepareStats(csvData, report, addTo, saveTo) {
   for (const row of csvData) {
     // institutionName,gender,class,registrationType,score,city,state
     let [
+      assessmentId,
       sName,
       sEmail,
       sPhone,
@@ -256,6 +316,7 @@ function prepareStats(csvData, report, addTo, saveTo) {
     score = parseInt(score.trim() || 0);
 
     const record = {
+      assessmentId: assessmentId,
       sName: sName,
       sEmail: sEmail,
       sPhone: sPhone,
@@ -296,6 +357,45 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
   }
 
   const reports = [
+    //to check if the normalized names are correct, else comment it
+    // {
+    //   name: 'institute-normalized-names',
+    //   keyFields: ['institute', 'district', 'state'],
+    //   dataFields: [
+    //     'institute',
+    //     'normalizeInstitute',
+    //     'city',
+    //     'district',
+    //     'state',
+    //   ],
+    //   preprocess: (record) => {
+    //     record.normalizeInstitute = normalizeInstitute(
+    //       record.institute,
+    //       record.city,
+    //       record.district,
+    //       record.state
+    //     );
+    //     return record;
+    //   },
+    // },
+    {
+      name: 'institute-wise-normalized-name-at-least-10-registrations',
+      keyFields: ['institute', 'district', 'state'],
+      dataFields: ['institute', 'district', 'state'],
+      preprocess: (record, report) => {
+        // report.counter = report.counter || 0;
+        // report.counter++;
+        // record.id = report.counter;
+        record.institute = normalizeInstitute(
+          record.institute,
+          record.city,
+          record.district,
+          record.state
+        );
+        return record;
+      },
+      postCheck: (record) => record.count > 9,
+    },
     {
       name: 'district-wise',
       keyFields: ['district'],
@@ -406,26 +506,6 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       },
       postCheck: (record) => record.count > 1,
     },
-    // {
-    //   name: 'institute-wise-normalized-name-at-least-10-registrations',
-    //   keyFields: ['normalizeInstitute'],
-    //   dataFields: [
-    //     'institute',
-    //     'normalizeInstitute',
-    //     'district',
-    //     'state',
-    //     'prant',
-    //     'kshetra',
-    //   ],
-    //   preprocess: (record) => {
-    //     record.normalizeInstitute = normalizeInstitute(
-    //       record.institute,
-    //       record.city
-    //     );
-    //     return record;
-    //   },
-    //   postCheck: (record) => record.count > 9,
-    // },
 
     {
       name: 'institute-wise',
@@ -658,18 +738,19 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       name: '20-scorer-student-list',
       keyFields: ['score'],
       dataFields: [
+        'assessmentId',
         'sName',
-        'sLang',
-        'institute',
         'grade',
-        'city',
+        'sLang',
         'state',
         'district',
+        'institute',
+        'gender',
       ],
       check: (record) => {
         return record.score == 20;
       },
-      preprocess: (record) => {
+      preprocess: (record, list) => {
         record.planted_10_seeds = record.planted_10_seeds ? 'Yes' : 'No';
         record.sLang = langMap[record.sLang] || `Unknown: ${record.sLang}`;
         return record;
@@ -701,20 +782,3 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     console.timeEnd('TotalTime');
   });
 });
-
-/*
-
-mlr --csv sort -n  registration_count output/out.csv > output/out-sorted.csv
-
-scp output/out.csv root@139.59.21.157:/var/lib/mysql-files/nspcout.csv
-
-
-LOAD DATA INFILE '/var/lib/mysql-files/nspcout.csv'
-INTO TABLE nspc_institutes
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
-
-
- */
