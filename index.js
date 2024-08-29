@@ -380,13 +380,13 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     // },
     {
       name: 'institute-wise-normalized-name-at-least-10-registrations',
-      keyFields: ['institute', 'district', 'state'],
-      dataFields: ['institute', 'district', 'state'],
+      keyFields: ['normalizeInstitute', 'district', 'state'],
+      dataFields: ['institute', 'normalizeInstitute', 'district', 'state'],
       preprocess: (record, report) => {
         // report.counter = report.counter || 0;
         // report.counter++;
         // record.id = report.counter;
-        record.institute = normalizeInstitute(
+        record.normalizeInstitute = normalizeInstitute(
           record.institute,
           record.city,
           record.district,
@@ -399,7 +399,7 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     {
       name: 'district-wise',
       keyFields: ['district'],
-      dataFields: ['city'],
+      dataFields: ['city', 'state', 'district'],
     },
     {
       name: 'district-wise-20-scorer',
