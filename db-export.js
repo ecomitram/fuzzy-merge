@@ -69,13 +69,13 @@ async function fetchData() {
     {
       $match: {
         module: 'nspc',
-        type: 'nspc24',
+        type: 'nspc25',
         $expr: {
           $lte: [
             {
               $toDate: '$c_at',
             },
-            new Date('Sat, 26 Aug 2024 00:00:00 GMT'),
+            new Date('Sat, 26 Aug 2025 00:00:00 GMT'),
           ],
         },
       },
