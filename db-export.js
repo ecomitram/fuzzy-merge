@@ -96,6 +96,8 @@ async function fetchData() {
         city: '$participant.location.city',
         state: '$participant.location.state',
         planted_10_seeds: '$participant.planted_10_seeds',
+        c_at: '$c_at',
+        userType: '$participant.userType',
       },
     },
   ];

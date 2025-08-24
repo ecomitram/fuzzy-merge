@@ -26,6 +26,17 @@ const langMap = {
   11: 'Telugu',
 };
 
+function formatDateToYYYYMMDD(dateString) {
+  if (!dateString) return 'Unknown';
+  try {
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return 'Invalid Date';
+    return date.toISOString().split('T')[0]; // Returns YYYY-MM-DD
+  } catch (e) {
+    return 'Invalid Date';
+  }
+}
+
 function cleanString(name) {
   name = name.trim();
   name = name.toLowerCase();
@@ -299,6 +310,7 @@ function prepareStats(csvData, report, addTo, saveTo) {
       city,
       state,
       planted_10_seeds,
+      c_at,
     ] = row;
 
     //skip header
@@ -334,6 +346,7 @@ function prepareStats(csvData, report, addTo, saveTo) {
       registrationType: registrationType,
       prant: prant,
       kshetra: kshetra,
+      c_at: c_at,
     };
 
     addTo(report, record);
@@ -586,6 +599,30 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       check: (record) => {
         return record.score == 20;
       },
+    },
+    {
+      name: 'daily-participation',
+      keyFields: ['participationDate'],
+      dataFields: ['participationDate'],
+      preprocess: (record) => {
+        record.participationDate = formatDateToYYYYMMDD(record.c_at);
+        return record;
+      },
+      check: (record) => {
+        // Only include dates from July 1, 2025 to August 27, 2025
+        const date = new Date(record.c_at);
+        if (isNaN(date.getTime())) return false;
+        
+        const startDate = new Date('2025-07-01');
+        const endDate = new Date('2025-08-27T23:59:59');
+        
+        return date >= startDate && date <= endDate;
+      },
+    },
+    {
+      name: 'state-wise-gender',
+      keyFields: ['state', 'gender'],
+      dataFields: ['state', 'gender'],
     },
   ];
 

@@ -33,6 +33,8 @@ csv-parse@^4.13.1:
 
 fuzzyset@1.0.7:
   version "1.0.7"
+  resolved "https://registry.yarnpkg.com/fuzzyset/-/fuzzyset-1.0.7.tgz#dbef22072ab3315b0ded28a235c1006ec9abd3fe"
+  integrity sha512-RjcvWPK6v+FHwierTqnjXjtF6fgZCOVucORlOt4ZEJRrHUqt4tRiCIzg1Zm0XMSAZGMTBCSHPx4IgdBH3m0VZg==
 
 memory-pager@^1.0.2:
   version "1.5.0"
