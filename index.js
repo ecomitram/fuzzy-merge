@@ -284,9 +284,11 @@ function saveReport(report) {
           }
           let data = report.dataFields.map((dataField) => record[dataField]);
           let ret = `${data.join(',')},${record.count}`;
-          return ret;
+          return { line: ret, count: record.count };
         })
         .filter((item) => item !== null) // Remove null entries (skipped records)
+        .sort((a, b) => b.count - a.count) // Sort by count descending
+        .map((item) => item.line) // Extract just the line
         .join('\n')
   );
 }
@@ -321,7 +323,7 @@ function prepareStats(csvData, report, addTo, saveTo) {
     let district = cleanDistrictName(city);
     if (districtsMap[district] === undefined) {
       console.log('District not found: ', district);
-      continue;
+      exit(1);
     }
     let prant = districtsMap[district].prant || 'BLANK';
     let kshetra = districtsMap[district].kshetra || 'BLANK';
@@ -612,10 +614,10 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
         // Only include dates from July 1, 2025 to August 27, 2025
         const date = new Date(record.c_at);
         if (isNaN(date.getTime())) return false;
-        
+
         const startDate = new Date('2025-07-01');
         const endDate = new Date('2025-08-27T23:59:59');
-        
+
         return date >= startDate && date <= endDate;
       },
     },
