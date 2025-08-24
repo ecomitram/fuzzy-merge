@@ -379,6 +379,22 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     //   },
     // },
     {
+      name: 'prant-wise-0-scorer',
+      keyFields: ['prant'],
+      dataFields: ['prant', 'score'],
+      check: (record) => {
+        return record.score == 0;
+      },
+    },
+    {
+      name: 'city-wise-0-scorer',
+      keyFields: ['city'],
+      dataFields: ['city', 'score'],
+      check: (record) => {
+        return record.score == 0;
+      },
+    },
+    {
       name: 'institute-wise-normalized-name-at-least-10-registrations',
       keyFields: ['normalizeInstitute', 'district', 'state'],
       dataFields: ['institute', 'normalizeInstitute', 'district', 'state'],
@@ -574,6 +590,22 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
   ];
 
   const lists = [
+    {
+      name: 'prant-wise-0-scorer',
+      keyFields: ['prant'],
+      dataFields: [
+        'prant',
+        'sPhone',
+        'score',
+        'district',
+        'sName',
+        'institute',
+        'grade',
+      ],
+      check: (record) => {
+        return record.score == 0;
+      },
+    },
     {
       name: 'prant-wise-20-scorer',
       keyFields: ['prant'],
