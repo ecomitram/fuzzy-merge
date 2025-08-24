@@ -117816,7 +117816,9 @@
     "kshetra": " Purvi kshetra"
   },
   "000000": {
-    "district": "Not-Applicable",
-    "state": "NRI"
+    "district": "NRI",
+    "state": "NRI",
+     "prant": "NRI",
+    "kshetra": " NRI"
   }
 }
