@@ -196,6 +196,78 @@ function saveStudentLists(list) {
   }
 }
 
+const instituteListData = {};
+
+function addToInstituteList(list, record) {
+  // check if record should be included in list
+  if (list.check && !list.check(record)) {
+    return;
+  }
+
+  // preprocess record
+  if (list.preprocess) {
+    record = list.preprocess(record, list);
+  }
+
+  let data = list.keyFields.map((keyField) => record[keyField]);
+  let key = data.join(',');
+
+  if (instituteListData[list.name] === undefined) {
+    instituteListData[list.name] = {};
+  }
+
+  const dataStore = instituteListData[list.name];
+
+  if (dataStore[key] === undefined) {
+    dataStore[key] = {};
+  }
+
+  // For institutes, we aggregate by unique institute+pincode combination
+  const instituteKey = `${record.cleanInstitute},${record.pincode}`;
+  
+  if (dataStore[key][instituteKey] === undefined) {
+    dataStore[key][instituteKey] = {
+      institute: record.institute, // Original name
+      pincode: record.pincode,
+      district: record.district,
+      state: record.state,
+      prant: record.prant,
+      studentCount: 0
+    };
+  }
+  
+  dataStore[key][instituteKey].studentCount++;
+}
+
+function saveInstituteLists(list) {
+  const dataStore = instituteListData[list.name];
+
+  const targetFolder = `output/institute-lists/${list.name}/`;
+  // Delete the folder if it already exists
+  if (fs.existsSync(targetFolder)) {
+    fs.rmSync(targetFolder, { recursive: true, force: true });
+  }
+
+  fs.mkdirSync(targetFolder, { recursive: true });
+
+  for (const [key, institutes] of Object.entries(dataStore)) {
+    const fileName = `${targetFolder}institutes-${key.replace(
+      /[^a-z0-9]/gi,
+      '_'
+    )}.csv`;
+
+    const header = 'institute,studentCount,pincode,district,state,prant\n';
+    const rows = Object.values(institutes)
+      .sort((a, b) => b.studentCount - a.studentCount)
+      .map((inst) =>
+        `"${inst.institute}",${inst.studentCount},"${inst.pincode}","${inst.district}","${inst.state}","${inst.prant}"`
+      )
+      .join('\n');
+
+    fs.writeFileSync(fileName, header + rows);
+  }
+}
+
 const reportData = {};
 
 function addToReport(report, record) {
@@ -841,6 +913,45 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     },
   ];
 
+  const instituteLists = [
+    {
+      name: 'prant-wise-institutes',
+      keyFields: ['prant'],
+      dataFields: ['institute', 'studentCount', 'pincode', 'district', 'state', 'prant'],
+      preprocess: (record) => {
+        record.cleanInstitute = cleanInstituteName(record.institute, record.city);
+        return record;
+      },
+      check: (record) => {
+        return record.state !== 'NotFound' && record.prant !== 'NotFound';
+      },
+    },
+    {
+      name: 'district-wise-institutes',
+      keyFields: ['district'],
+      dataFields: ['institute', 'studentCount', 'pincode', 'district', 'state', 'prant'],
+      preprocess: (record) => {
+        record.cleanInstitute = cleanInstituteName(record.institute, record.city);
+        return record;
+      },
+      check: (record) => {
+        return record.state !== 'NotFound' && record.district !== 'NotFound';
+      },
+    },
+    {
+      name: 'state-wise-institutes',
+      keyFields: ['state'],
+      dataFields: ['institute', 'studentCount', 'pincode', 'district', 'state', 'prant'],
+      preprocess: (record) => {
+        record.cleanInstitute = cleanInstituteName(record.institute, record.city);
+        return record;
+      },
+      check: (record) => {
+        return record.state !== 'NotFound';
+      },
+    },
+  ];
+
   // Parse the CSV data
   csvParse(data, { delimiter: ',' }, (err, csvData) => {
     if (err) {
@@ -860,6 +971,13 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       console.time(list.name);
       prepareStats(csvData, list, addToStudentList, saveStudentLists);
       console.timeEnd(list.name);
+    }
+
+    for (const instituteList of instituteLists) {
+      console.log('Processing institute list: ', instituteList.name);
+      console.time(instituteList.name);
+      prepareStats(csvData, instituteList, addToInstituteList, saveInstituteLists);
+      console.timeEnd(instituteList.name);
     }
 
     console.timeEnd('TotalTime');
