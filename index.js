@@ -242,29 +242,80 @@ function addToInstituteList(list, record) {
 function saveInstituteLists(list) {
   const dataStore = instituteListData[list.name];
 
-  const targetFolder = `output/institute-lists/${list.name}/`;
-  // Delete the folder if it already exists
-  if (fs.existsSync(targetFolder)) {
-    fs.rmSync(targetFolder, { recursive: true, force: true });
-  }
+  if (list.hierarchical?.enabled) {
+    // Handle hierarchical structure
+    const baseFolder = `output/institute-lists/${list.name}/`;
+    
+    if (fs.existsSync(baseFolder)) {
+      fs.rmSync(baseFolder, { recursive: true, force: true });
+    }
+    
+    for (const [key, institutes] of Object.entries(dataStore)) {
+      const keyParts = key.split(',');
+      const keyMap = {};
+      list.keyFields.forEach((field, index) => {
+        keyMap[field] = keyParts[index];
+      });
+      
+      // Build folder path from configuration
+      const folderParts = list.hierarchical.folderPath.map(field => 
+        keyMap[field].replace(/[^a-z0-9]/gi, '_')
+      );
+      const folderPath = `${baseFolder}${folderParts.join('/')}/`;
+      
+      if (!fs.existsSync(folderPath)) {
+        fs.mkdirSync(folderPath, { recursive: true });
+      }
+      
+      // Build filename from configuration
+      const fileName = `${folderPath}${keyMap[list.hierarchical.fileName].replace(/[^a-z0-9]/gi, '_')}.csv`;
+      
+      // Write CSV content
+      const header = list.dataFields.join(',') + '\n';
+      const rows = Object.values(institutes)
+        .sort((a, b) => b.studentCount - a.studentCount)
+        .map((inst) => {
+          const values = list.dataFields.map(field => {
+            if (field === 'institute') {
+              return `"${inst.institute}"`;
+            } else if (typeof inst[field] === 'string') {
+              return `"${inst[field]}"`;
+            } else {
+              return inst[field];
+            }
+          });
+          return values.join(',');
+        })
+        .join('\n');
+      
+      fs.writeFileSync(fileName, header + rows);
+    }
+  } else {
+    // Keep existing non-hierarchical logic
+    const targetFolder = `output/institute-lists/${list.name}/`;
+    
+    if (fs.existsSync(targetFolder)) {
+      fs.rmSync(targetFolder, { recursive: true, force: true });
+    }
 
-  fs.mkdirSync(targetFolder, { recursive: true });
+    fs.mkdirSync(targetFolder, { recursive: true });
 
-  for (const [key, institutes] of Object.entries(dataStore)) {
-    const fileName = `${targetFolder}institutes-${key.replace(
-      /[^a-z0-9]/gi,
-      '_'
-    )}.csv`;
+    for (const [key, institutes] of Object.entries(dataStore)) {
+      const fileName = `${targetFolder}institutes-${key.replace(
+        /[^a-z0-9]/gi,
+        '_'
+      )}.csv`;
 
-    const header = 'institute,studentCount,pincode,district,state,prant\n';
-    const rows = Object.values(institutes)
-      .sort((a, b) => b.studentCount - a.studentCount)
-      .map((inst) =>
-        `"${inst.institute}",${inst.studentCount},"${inst.pincode}","${inst.district}","${inst.state}","${inst.prant}"`
-      )
-      .join('\n');
+      const header = 'institute,studentCount,pincode,district,state,prant\n';
+      const rows = Object.values(institutes)
+        .sort((a, b) => b.studentCount - a.studentCount)
+        .map((inst) =>
+          `"${inst.institute}",${inst.studentCount},"${inst.pincode}","${inst.district}","${inst.state}","${inst.prant}"`
+        )
+        .join('\n');
 
-    fs.writeFileSync(fileName, header + rows);
+      fs.writeFileSync(fileName, header + rows);
+    }
   }
 }
 
@@ -928,7 +979,12 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     },
     {
       name: 'district-wise-institutes',
-      keyFields: ['district'],
+      keyFields: ['district', 'prant'],
+      hierarchical: {
+        enabled: true,
+        folderPath: ['prant'],
+        fileName: 'district'
+      },
       dataFields: ['institute', 'studentCount', 'pincode', 'district', 'state', 'prant'],
       preprocess: (record) => {
         record.cleanInstitute = cleanInstituteName(record.institute, record.city);
