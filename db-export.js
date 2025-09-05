@@ -75,7 +75,7 @@ async function fetchData() {
             {
               $toDate: '$c_at',
             },
-            new Date('Sat, 27 Aug 2025 00:00:00 GMT'),
+            new Date('Sat, 28 Aug 2025 00:00:00 GMT'),
           ],
         },
       },
@@ -97,7 +97,9 @@ async function fetchData() {
         state: '$participant.location.state',
         pincode: '$participant.location.pincode',
         planted_10_seeds: '$participant.planted_10_seeds',
-        c_at: { $dateToString: { format: "%Y-%m-%dT%H:%M:%S.%LZ", date: "$c_at" } },
+        c_at: {
+          $dateToString: { format: '%Y-%m-%dT%H:%M:%S.%LZ', date: '$c_at' },
+        },
         userType: '$participant.userType',
       },
     },

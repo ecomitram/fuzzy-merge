@@ -1,17 +1,10 @@
 const fs = require('fs');
 const csvParse = require('csv-parse');
 const FuzzySet = require('fuzzyset');
-let districtsMap = require('./mapper/mapper.json');
+const pincodeMap = require('./pincodes/pincode.json');
 const { exit } = require('process');
 const { count } = require('console');
 const { normalize } = require('path');
-
-districtsMap[''] = districtsMap['BLANK'] = {
-  district: 'BLANK',
-  state: 'BLANK',
-  prant: 'BLANK',
-  kshetra: 'BLANK',
-};
 
 const langMap = {
   1: 'Asaamese',
@@ -37,7 +30,7 @@ function formatDateToYYYYMMDD(dateString) {
   }
 }
 
-function cleanString(name) {
+function cleanString(name, city) {
   name = name.trim();
   name = name.toLowerCase();
 
@@ -76,7 +69,7 @@ function cleanString(name) {
 }
 
 function cleanInstituteName(name, city) {
-  return cleanString(name);
+  return cleanString(name, city);
 }
 
 const cityFuzzyMap = {};
@@ -93,7 +86,7 @@ function normalizeInstitute(institute, city, district, state) {
     return 'NRI';
   }
 
-  if (state == '') {
+  if (state == 'NotFound') {
     return null;
   }
 
@@ -123,27 +116,35 @@ function cleanDistrictName(name) {
   return name;
 }
 
+function getLocationFromPincode(pincode) {
+  // Clean and validate pincode
+  const cleanedPincode = (pincode || '').toString().trim();
+
+  // Look up in pincode mapping
+  if (cleanedPincode && pincodeMap[cleanedPincode]) {
+    return pincodeMap[cleanedPincode];
+  }
+
+  // Return NotFound for invalid or missing pincodes
+  return {
+    district: 'NotFound',
+    state: 'NotFound',
+    prant: 'NotFound',
+    kshetra: 'NotFound',
+  };
+}
+
+function fixRecordLocationByPincode(record) {
+  const locationData = getLocationFromPincode(record.pincode);
+  return { ...record, ...locationData };
+}
+
 const studentListData = {};
 
 function addToStudentList(list, record) {
   // check if record should be included in list
   if (list.check && !list.check(record)) {
     return;
-  }
-
-  //  if state is blank
-  if (record.state == '') {
-    record.state = 'Not Provided';
-    record.district = 'Not Provided';
-    record.prant = 'Not Provided';
-    record.kshetra = 'Not Provided';
-  }
-
-  if (record.state == 'NRI') {
-    record.state = 'NRI';
-    record.district = 'NRI';
-    record.prant = 'NRI';
-    record.kshetra = 'NRI';
   }
 
   // preprocess record
@@ -201,21 +202,6 @@ function addToReport(report, record) {
   // check if record should be included in report
   if (report.check && !report.check(record)) {
     return;
-  }
-
-  //  if state is blank
-  if (record.state == '') {
-    record.state = 'Not Provided';
-    record.district = 'Not Provided';
-    record.prant = 'Not Provided';
-    record.kshetra = 'Not Provided';
-  }
-
-  if (record.state == 'NRI') {
-    record.state = 'NRI';
-    record.district = 'NRI';
-    record.prant = 'NRI';
-    record.kshetra = 'NRI';
   }
 
   // preprocess record
@@ -311,25 +297,19 @@ function prepareStats(csvData, report, addTo, saveTo) {
       score,
       city,
       state,
+      pincode,
       planted_10_seeds,
       c_at,
+      userType,
     ] = row;
 
     //skip header
     if (state === 'state') {
       continue;
     }
-
-    let district = cleanDistrictName(city);
-    if (districtsMap[district] === undefined) {
-      console.log('District not found: ', district);
-      exit(1);
-    }
-    let prant = districtsMap[district].prant || 'BLANK';
-    let kshetra = districtsMap[district].kshetra || 'BLANK';
     score = parseInt(score.trim() || 0);
 
-    const record = {
+    let record = {
       assessmentId: assessmentId,
       sName: sName,
       sEmail: sEmail,
@@ -339,23 +319,20 @@ function prepareStats(csvData, report, addTo, saveTo) {
       institute: institute,
       grade: grade,
       city: city,
-      state: state,
       gender: gender,
       score: score,
-      district: district,
-      state: state,
       planted_10_seeds: planted_10_seeds,
       registrationType: registrationType,
-      prant: prant,
-      kshetra: kshetra,
+      pincode: pincode,
       c_at: c_at,
+      userType: userType,
     };
+
+    // cleanup the data
+    record = fixRecordLocationByPincode(record);
 
     addTo(report, record);
     counter++;
-    // if (counter % 1000 === 0) {
-    //   console.log('Processed records: ', counter);
-    // }
   }
 
   console.log('Total records: ', counter);
@@ -393,6 +370,25 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     //     return record;
     //   },
     // },
+
+    {
+      name: 'institute-wise',
+      keyFields: ['institute', 'district', 'state'],
+      dataFields: ['institute', 'city', 'district', 'state'],
+      preprocess: (record) => {
+        record.institute = cleanInstituteName(record.institute, record.city);
+        return record;
+      },
+    },
+    {
+      name: 'pincode-wise',
+      keyFields: ['pincode'],
+      dataFields: ['pincode', 'district', 'state', 'prant', 'kshetra'],
+      check: (record) => {
+        return record.state != 'NotFound';
+      },
+      postCheck: (record) => record.count > 9 && record.state != 'NotFound',
+    },
     {
       name: 'prant-wise-0-scorer',
       keyFields: ['prant'],
@@ -401,36 +397,19 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
         return record.score == 0;
       },
     },
-    {
-      name: 'city-wise-0-scorer',
-      keyFields: ['city'],
-      dataFields: ['city', 'score'],
-      check: (record) => {
-        return record.score == 0;
-      },
-    },
-    {
-      name: 'institute-wise-normalized-name-at-least-10-registrations',
-      keyFields: ['normalizeInstitute', 'district', 'state'],
-      dataFields: ['institute', 'normalizeInstitute', 'district', 'state'],
-      preprocess: (record, report) => {
-        // report.counter = report.counter || 0;
-        // report.counter++;
-        // record.id = report.counter;
-        record.normalizeInstitute = normalizeInstitute(
-          record.institute,
-          record.city,
-          record.district,
-          record.state
-        );
-        return record;
-      },
-      postCheck: (record) => record.count > 9,
-    },
+
     {
       name: 'district-wise',
       keyFields: ['district'],
       dataFields: ['city', 'state', 'district'],
+    },
+    {
+      name: 'district-wise-0-scorer',
+      keyFields: ['district', 'state'],
+      dataFields: ['district', 'state', 'score'],
+      check: (record) => {
+        return record.score == 0;
+      },
     },
     {
       name: 'district-wise-20-scorer',
@@ -446,6 +425,14 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       dataFields: ['state'],
     },
     {
+      name: 'state-wise-0-scorer',
+      keyFields: ['state'],
+      dataFields: ['state', 'score'],
+      check: (record) => {
+        return record.score == 0;
+      },
+    },
+    {
       name: 'state-wise-20-scorer',
       keyFields: ['state'],
       dataFields: ['state', 'score'],
@@ -457,6 +444,14 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       name: 'prant-wise',
       keyFields: ['prant'],
       dataFields: ['prant'],
+    },
+    {
+      name: 'prant-wise-0-scorer',
+      keyFields: ['prant'],
+      dataFields: ['prant', 'score'],
+      check: (record) => {
+        return record.score == 0;
+      },
     },
     {
       name: 'prant-wise-20-scorer',
@@ -472,6 +467,14 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       dataFields: ['kshetra'],
     },
     {
+      name: 'kshetra-wise-0-scorer',
+      keyFields: ['kshetra'],
+      dataFields: ['kshetra', 'score'],
+      check: (record) => {
+        return record.score == 0;
+      },
+    },
+    {
       name: 'kshetra-wise-20-scorer',
       keyFields: ['kshetra'],
       dataFields: ['kshetra', 'score'],
@@ -485,7 +488,7 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       dataFields: ['grade'],
     },
     {
-      name: 'prant-grade-wise',
+      name: 'grade-wise-prant',
       keyFields: ['prant', 'grade'],
       dataFields: ['prant', 'grade'],
     },
@@ -502,6 +505,15 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       keyFields: ['gender'],
       dataFields: ['gender'],
     },
+    {
+      name: 'gender-wise-20-scorer',
+      keyFields: ['gender'],
+      dataFields: ['gender'],
+      check: (record) => {
+        return record.score == 20;
+      },
+    },
+
     {
       name: 'score-wise',
       keyFields: ['score'],
@@ -528,30 +540,30 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     },
 
     {
-      name: 'institute-wise-clean-name',
-      keyFields: ['institute'],
-      dataFields: ['institute', 'district', 'state', 'prant', 'kshetra'],
+      name: 'institute-wise-clean-name-at-least-10-registrations',
+      keyFields: ['cleanInstitute', 'pincode'],
+      dataFields: ['institute', 'pincode', 'district', 'state'],
       preprocess: (record) => {
-        record.institute = cleanInstituteName(record.institute, record.city);
+        record.cleanInstitute = cleanInstituteName(
+          record.institute,
+          record.city
+        );
         return record;
       },
-      postCheck: (record) => record.count > 1,
-    },
-
-    {
-      name: 'institute-wise',
-      keyFields: ['institute'],
-      dataFields: ['institute', 'district', 'prant', 'kshetra'],
+      postCheck: (record) => record.count > 10,
     },
     {
       name: 'institute-wise-20-scorer',
-      keyFields: ['institute'],
-      dataFields: ['institute', 'district', 'prant', 'kshetra', 'score'],
+      keyFields: ['cleanInstitute', 'pincode'],
+      dataFields: ['institute', 'pincode', 'district', 'state'],
       check: (record) => {
         return record.score == 20;
       },
       preprocess: (record) => {
-        record.institute = cleanInstituteName(record.institute, record.city);
+        record.cleanInstitute = cleanInstituteName(
+          record.institute,
+          record.city
+        );
         return record;
       },
     },

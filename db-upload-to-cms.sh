@@ -11,9 +11,11 @@ echo "tableName: $tableName"
 echo "localCsvFile: $localCsvFile"
 echo "CMS_MYSQL_PASSWORD: $CMS_MYSQL_PASSWORD"
 
+#assessmentId,sName,grade,sLang,state,district,institute,gender
 # bash db-upload-to-cms.sh nspc_top_students output/student-lists/20-scorer-student-list/list-20.csv 'PASSWORD' 'assessmentId,name,grade,language,state,city,institute,gender'
-# bash db-upload-to-cms.sh nspc_institutes output/reports/institute-wise-normalized-name-at-least-10-registrations.csv 'PASSWORD' 'name,city,state,registration_count'
+# bash db-upload-to-cms.sh nspc_institutes output/reports/institute-wise-clean-name-at-least-10-registrations.csv 'PASSWORD' 'name,city,state,registration_count'
 #
+
 
 if [ -z "$tableName" ] || [ -z "$localCsvFile" ] || [ -z "$CMS_MYSQL_PASSWORD" ]; then
     echo "Usage: $0 <tableName> <localCsvFile> <CMS_MYSQL_PASSWORD>"
