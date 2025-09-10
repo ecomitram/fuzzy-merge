@@ -171,28 +171,71 @@ function addToStudentList(list, record) {
 function saveStudentLists(list) {
   const dataStore = studentListData[list.name];
 
-  const targetFolder = `output/student-lists/${list.name}/`;
-  // Delete the folder if it already exists
-  if (fs.existsSync(targetFolder)) {
-    fs.rmSync(targetFolder, { recursive: true, force: true });
-  }
+  if (list.hierarchical?.enabled) {
+    // Handle hierarchical structure
+    const baseFolder = `output/student-lists/${list.name}/`;
 
-  fs.mkdirSync(targetFolder, { recursive: true });
+    if (fs.existsSync(baseFolder)) {
+      fs.rmSync(baseFolder, { recursive: true, force: true });
+    }
 
-  for (const [key, records] of Object.entries(dataStore)) {
-    const fileName = `${targetFolder}list-${key.replace(
-      /[^a-z0-9]/gi,
-      '_'
-    )}.csv`;
+    for (const [key, records] of Object.entries(dataStore)) {
+      const keyParts = key.split(',');
+      const keyMap = {};
+      list.keyFields.forEach((field, index) => {
+        keyMap[field] = keyParts[index];
+      });
 
-    const header = list.dataFields.join(',') + '\n';
-    const rows = records
-      .map((record) =>
-        list.dataFields.map((field) => `"${record[field]}"`).join(',')
-      )
-      .join('\n');
+      // Build folder path from configuration
+      const folderParts = list.hierarchical.folderPath.map((field) =>
+        keyMap[field].replace(/[^a-z0-9]/gi, '_')
+      );
+      const folderPath = `${baseFolder}${folderParts.join('/')}/`;
 
-    fs.writeFileSync(fileName, header + rows);
+      if (!fs.existsSync(folderPath)) {
+        fs.mkdirSync(folderPath, { recursive: true });
+      }
+
+      // Build filename from configuration
+      const fileName = `${folderPath}list-${keyMap[
+        list.hierarchical.fileName
+      ].replace(/[^a-z0-9]/gi, '_')}.csv`;
+
+      // Write CSV content
+      const header = list.dataFields.join(',') + '\n';
+      const rows = records
+        .map((record) =>
+          list.dataFields.map((field) => `"${record[field]}"`).join(',')
+        )
+        .join('\n');
+
+      fs.writeFileSync(fileName, header + rows);
+    }
+  } else {
+    // Keep existing non-hierarchical logic
+    const targetFolder = `output/student-lists/${list.name}/`;
+    // Delete the folder if it already exists
+    if (fs.existsSync(targetFolder)) {
+      fs.rmSync(targetFolder, { recursive: true, force: true });
+    }
+
+    fs.mkdirSync(targetFolder, { recursive: true });
+
+    for (const [key, records] of Object.entries(dataStore)) {
+      const fileName = `${targetFolder}list-${key.replace(
+        /[^a-z0-9]/gi,
+        '_'
+      )}.csv`;
+
+      const header = list.dataFields.join(',') + '\n';
+      const rows = records
+        .map((record) =>
+          list.dataFields.map((field) => `"${record[field]}"`).join(',')
+        )
+        .join('\n');
+
+      fs.writeFileSync(fileName, header + rows);
+    }
   }
 }
 
@@ -224,7 +267,7 @@ function addToInstituteList(list, record) {
 
   // For institutes, we aggregate by unique institute+pincode combination
   const instituteKey = `${record.cleanInstitute},${record.pincode}`;
-  
+
   if (dataStore[key][instituteKey] === undefined) {
     dataStore[key][instituteKey] = {
       institute: record.institute, // Original name
@@ -232,10 +275,10 @@ function addToInstituteList(list, record) {
       district: record.district,
       state: record.state,
       prant: record.prant,
-      studentCount: 0
+      studentCount: 0,
     };
   }
-  
+
   dataStore[key][instituteKey].studentCount++;
 }
 
@@ -245,37 +288,39 @@ function saveInstituteLists(list) {
   if (list.hierarchical?.enabled) {
     // Handle hierarchical structure
     const baseFolder = `output/institute-lists/${list.name}/`;
-    
+
     if (fs.existsSync(baseFolder)) {
       fs.rmSync(baseFolder, { recursive: true, force: true });
     }
-    
+
     for (const [key, institutes] of Object.entries(dataStore)) {
       const keyParts = key.split(',');
       const keyMap = {};
       list.keyFields.forEach((field, index) => {
         keyMap[field] = keyParts[index];
       });
-      
+
       // Build folder path from configuration
-      const folderParts = list.hierarchical.folderPath.map(field => 
+      const folderParts = list.hierarchical.folderPath.map((field) =>
         keyMap[field].replace(/[^a-z0-9]/gi, '_')
       );
       const folderPath = `${baseFolder}${folderParts.join('/')}/`;
-      
+
       if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath, { recursive: true });
       }
-      
+
       // Build filename from configuration
-      const fileName = `${folderPath}${keyMap[list.hierarchical.fileName].replace(/[^a-z0-9]/gi, '_')}.csv`;
-      
+      const fileName = `${folderPath}${keyMap[
+        list.hierarchical.fileName
+      ].replace(/[^a-z0-9]/gi, '_')}.csv`;
+
       // Write CSV content
       const header = list.dataFields.join(',') + '\n';
       const rows = Object.values(institutes)
         .sort((a, b) => b.studentCount - a.studentCount)
         .map((inst) => {
-          const values = list.dataFields.map(field => {
+          const values = list.dataFields.map((field) => {
             if (field === 'institute') {
               return `"${inst.institute}"`;
             } else if (typeof inst[field] === 'string') {
@@ -287,13 +332,13 @@ function saveInstituteLists(list) {
           return values.join(',');
         })
         .join('\n');
-      
+
       fs.writeFileSync(fileName, header + rows);
     }
   } else {
     // Keep existing non-hierarchical logic
     const targetFolder = `output/institute-lists/${list.name}/`;
-    
+
     if (fs.existsSync(targetFolder)) {
       fs.rmSync(targetFolder, { recursive: true, force: true });
     }
@@ -309,8 +354,9 @@ function saveInstituteLists(list) {
       const header = 'institute,studentCount,pincode,district,state,prant\n';
       const rows = Object.values(institutes)
         .sort((a, b) => b.studentCount - a.studentCount)
-        .map((inst) =>
-          `"${inst.institute}",${inst.studentCount},"${inst.pincode}","${inst.district}","${inst.state}","${inst.prant}"`
+        .map(
+          (inst) =>
+            `"${inst.institute}",${inst.studentCount},"${inst.pincode}","${inst.district}","${inst.state}","${inst.prant}"`
         )
         .join('\n');
 
@@ -838,7 +884,12 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     },
     {
       name: 'district-wise-20-scorer',
-      keyFields: ['district'],
+      keyFields: ['district', 'state'],
+      hierarchical: {
+        enabled: true,
+        folderPath: ['state'],
+        fileName: 'district',
+      },
       dataFields: [
         'sName',
         'sPhone',
@@ -917,7 +968,12 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     },
     {
       name: 'district-wise',
-      keyFields: ['district'],
+      keyFields: ['district', 'state'],
+      hierarchical: {
+        enabled: true,
+        folderPath: ['state'],
+        fileName: 'district',
+      },
       dataFields: [
         'sName',
         'sPhone',
@@ -968,9 +1024,19 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     {
       name: 'prant-wise-institutes',
       keyFields: ['prant'],
-      dataFields: ['institute', 'studentCount', 'pincode', 'district', 'state', 'prant'],
+      dataFields: [
+        'institute',
+        'studentCount',
+        'pincode',
+        'district',
+        'state',
+        'prant',
+      ],
       preprocess: (record) => {
-        record.cleanInstitute = cleanInstituteName(record.institute, record.city);
+        record.cleanInstitute = cleanInstituteName(
+          record.institute,
+          record.city
+        );
         return record;
       },
       check: (record) => {
@@ -983,11 +1049,21 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
       hierarchical: {
         enabled: true,
         folderPath: ['prant'],
-        fileName: 'district'
+        fileName: 'district',
       },
-      dataFields: ['institute', 'studentCount', 'pincode', 'district', 'state', 'prant'],
+      dataFields: [
+        'institute',
+        'studentCount',
+        'pincode',
+        'district',
+        'state',
+        'prant',
+      ],
       preprocess: (record) => {
-        record.cleanInstitute = cleanInstituteName(record.institute, record.city);
+        record.cleanInstitute = cleanInstituteName(
+          record.institute,
+          record.city
+        );
         return record;
       },
       check: (record) => {
@@ -997,9 +1073,19 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     {
       name: 'state-wise-institutes',
       keyFields: ['state'],
-      dataFields: ['institute', 'studentCount', 'pincode', 'district', 'state', 'prant'],
+      dataFields: [
+        'institute',
+        'studentCount',
+        'pincode',
+        'district',
+        'state',
+        'prant',
+      ],
       preprocess: (record) => {
-        record.cleanInstitute = cleanInstituteName(record.institute, record.city);
+        record.cleanInstitute = cleanInstituteName(
+          record.institute,
+          record.city
+        );
         return record;
       },
       check: (record) => {
@@ -1032,7 +1118,12 @@ fs.readFile('input/assessments.csv', 'utf8', (err, data) => {
     for (const instituteList of instituteLists) {
       console.log('Processing institute list: ', instituteList.name);
       console.time(instituteList.name);
-      prepareStats(csvData, instituteList, addToInstituteList, saveInstituteLists);
+      prepareStats(
+        csvData,
+        instituteList,
+        addToInstituteList,
+        saveInstituteLists
+      );
       console.timeEnd(instituteList.name);
     }
 
